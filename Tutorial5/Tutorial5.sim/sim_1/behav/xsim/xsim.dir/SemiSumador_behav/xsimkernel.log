@@ -1,0 +1,7 @@
+Running: xsim.dir/SemiSumador_behav/xsimk.exe -simmode gui -wdb SemiSumador_behav.wdb -simrunnum 0 -socket 53402
+Design successfully loaded
+Design Loading Memory Usage: 7672 KB (Peak: 7672 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 8244 KB (Peak: 8244 KB)
+Simulation CPU Usage: 124 ms
