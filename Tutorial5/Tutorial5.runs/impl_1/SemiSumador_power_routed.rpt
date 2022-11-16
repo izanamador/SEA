@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Wed Nov  9 16:29:27 2022
+| Date             : Wed Nov 16 15:44:33 2022
 | Host             : Lab3504L1-3 running 64-bit major release  (build 9200)
 | Command          : report_power -file SemiSumador_power_routed.rpt -pb SemiSumador_power_summary_routed.pb -rpx SemiSumador_power_routed.rpx
 | Design           : SemiSumador
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.116        |
+| Total On-Chip Power (W)  | 2.114        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.991        |
+| Dynamic (W)              | 1.990        |
 | Device Static (W)        | 0.124        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 60.6         |
@@ -54,10 +54,10 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | Slice Logic    |     0.005 |        2 |       --- |             --- |
 |   LUT as Logic |     0.005 |        1 |     17600 |           <0.01 |
-| Signals        |     0.020 |        4 |       --- |             --- |
+| Signals        |     0.019 |        4 |       --- |             --- |
 | I/O            |     1.966 |        4 |       100 |            4.00 |
 | Static Power   |     0.124 |          |           |                 |
-| Total          |     2.116 |          |           |                 |
+| Total          |     2.114 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -67,7 +67,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.041 |       0.033 |      0.009 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.040 |       0.032 |      0.008 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.081 |       0.072 |      0.009 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.555 |       0.554 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -141,7 +141,7 @@ Table of Contents
 +-------------+-----------+
 | Name        | Power (W) |
 +-------------+-----------+
-| SemiSumador |     1.991 |
+| SemiSumador |     1.990 |
 +-------------+-----------+
 
 

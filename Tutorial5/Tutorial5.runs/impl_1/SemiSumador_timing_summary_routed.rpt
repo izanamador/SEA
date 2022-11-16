@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Wed Nov  9 16:29:28 2022
+| Date         : Wed Nov 16 15:44:33 2022
 | Host         : Lab3504L1-3 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file SemiSumador_timing_summary_routed.rpt -pb SemiSumador_timing_summary_routed.pb -rpx SemiSumador_timing_summary_routed.rpx -warn_on_violation
 | Design       : SemiSumador
@@ -222,20 +222,20 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        9.561ns  (logic 5.344ns (55.894%)  route 4.217ns (44.106%))
+  Data Path Delay:        9.168ns  (logic 5.535ns (60.376%)  route 3.633ns (39.624%))
   Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    P15                                               0.000     0.000 r  b (IN)
+    V15                                               0.000     0.000 r  b (IN)
                          net (fo=0)                   0.000     0.000    b
-    P15                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  b_IBUF_inst/O
-                         net (fo=2, routed)           2.553     4.004    b_IBUF
-    SLICE_X43Y53         LUT2 (Prop_lut2_I1_O)        0.152     4.156 r  c_OBUF_inst_i_1/O
-                         net (fo=1, routed)           1.664     5.820    c_OBUF
-    M15                  OBUF (Prop_obuf_I_O)         3.741     9.561 r  c_OBUF_inst/O
-                         net (fo=0)                   0.000     9.561    c
-    M15                                                               r  c (OUT)
+    V15                  IBUF (Prop_ibuf_I_O)         1.569     1.569 r  b_IBUF_inst/O
+                         net (fo=2, routed)           1.366     2.935    b_IBUF
+    SLICE_X43Y29         LUT2 (Prop_lut2_I1_O)        0.152     3.087 r  c_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.267     5.354    c_OBUF
+    T10                  OBUF (Prop_obuf_I_O)         3.814     9.168 r  c_OBUF_inst/O
+                         net (fo=0)                   0.000     9.168    c
+    T10                                                               r  c (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -245,20 +245,20 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        9.331ns  (logic 5.106ns (54.720%)  route 4.225ns (45.280%))
+  Data Path Delay:        8.952ns  (logic 5.313ns (59.348%)  route 3.639ns (40.652%))
   Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    P15                                               0.000     0.000 r  b (IN)
+    V15                                               0.000     0.000 r  b (IN)
                          net (fo=0)                   0.000     0.000    b
-    P15                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  b_IBUF_inst/O
-                         net (fo=2, routed)           2.553     4.004    b_IBUF
-    SLICE_X43Y53         LUT2 (Prop_lut2_I0_O)        0.124     4.128 r  s_OBUF_inst_i_1/O
-                         net (fo=1, routed)           1.672     5.800    s_OBUF
-    M14                  OBUF (Prop_obuf_I_O)         3.531     9.331 r  s_OBUF_inst/O
-                         net (fo=0)                   0.000     9.331    s
-    M14                                                               r  s (OUT)
+    V15                  IBUF (Prop_ibuf_I_O)         1.569     1.569 r  b_IBUF_inst/O
+                         net (fo=2, routed)           1.366     2.935    b_IBUF
+    SLICE_X43Y29         LUT2 (Prop_lut2_I0_O)        0.124     3.059 r  s_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.274     5.332    s_OBUF
+    T11                  OBUF (Prop_obuf_I_O)         3.620     8.952 r  s_OBUF_inst/O
+                         net (fo=0)                   0.000     8.952    s
+    T11                                                               r  s (OUT)
   -------------------------------------------------------------------    -------------------
 
 
@@ -274,20 +274,20 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        2.292ns  (logic 1.498ns (65.334%)  route 0.795ns (34.666%))
+  Data Path Delay:        2.605ns  (logic 1.695ns (65.046%)  route 0.911ns (34.954%))
   Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    G15                                               0.000     0.000 r  a (IN)
+    W15                                               0.000     0.000 r  a (IN)
                          net (fo=0)                   0.000     0.000    a
-    G15                  IBUF (Prop_ibuf_I_O)         0.220     0.220 r  a_IBUF_inst/O
-                         net (fo=2, routed)           0.467     0.688    a_IBUF
-    SLICE_X43Y53         LUT2 (Prop_lut2_I1_O)        0.045     0.733 r  s_OBUF_inst_i_1/O
-                         net (fo=1, routed)           0.327     1.060    s_OBUF
-    M14                  OBUF (Prop_obuf_I_O)         1.232     2.292 r  s_OBUF_inst/O
-                         net (fo=0)                   0.000     2.292    s
-    M14                                                               r  s (OUT)
+    W15                  IBUF (Prop_ibuf_I_O)         0.330     0.330 r  a_IBUF_inst/O
+                         net (fo=2, routed)           0.322     0.652    a_IBUF
+    SLICE_X43Y29         LUT2 (Prop_lut2_I1_O)        0.045     0.697 r  s_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.589     1.285    s_OBUF
+    T11                  OBUF (Prop_obuf_I_O)         1.320     2.605 r  s_OBUF_inst/O
+                         net (fo=0)                   0.000     2.605    s
+    T11                                                               r  s (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -297,20 +297,20 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        2.373ns  (logic 1.570ns (66.185%)  route 0.802ns (33.815%))
+  Data Path Delay:        2.664ns  (logic 1.752ns (65.763%)  route 0.912ns (34.237%))
   Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    G15                                               0.000     0.000 r  a (IN)
+    W15                                               0.000     0.000 r  a (IN)
                          net (fo=0)                   0.000     0.000    a
-    G15                  IBUF (Prop_ibuf_I_O)         0.220     0.220 r  a_IBUF_inst/O
-                         net (fo=2, routed)           0.467     0.688    a_IBUF
-    SLICE_X43Y53         LUT2 (Prop_lut2_I0_O)        0.048     0.736 r  c_OBUF_inst_i_1/O
-                         net (fo=1, routed)           0.335     1.071    c_OBUF
-    M15                  OBUF (Prop_obuf_I_O)         1.302     2.373 r  c_OBUF_inst/O
-                         net (fo=0)                   0.000     2.373    c
-    M15                                                               r  c (OUT)
+    W15                  IBUF (Prop_ibuf_I_O)         0.330     0.330 r  a_IBUF_inst/O
+                         net (fo=2, routed)           0.322     0.652    a_IBUF
+    SLICE_X43Y29         LUT2 (Prop_lut2_I0_O)        0.048     0.700 r  c_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.590     1.290    c_OBUF
+    T10                  OBUF (Prop_obuf_I_O)         1.374     2.664 r  c_OBUF_inst/O
+                         net (fo=0)                   0.000     2.664    c
+    T10                                                               r  c (OUT)
   -------------------------------------------------------------------    -------------------
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1668007129" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/SemiSumador.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1668609734" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/SemiSumador.dcp">
   <File Type="PA-TCL" Name="SemiSumador.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="SemiSumador_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="SemiSumador_reports.tcl"/>
@@ -52,9 +52,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

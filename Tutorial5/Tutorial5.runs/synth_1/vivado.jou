@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Wed Nov  9 16:19:00 2022
-# Process ID: 8436
+# Start of session at: Wed Nov 16 15:42:27 2022
+# Process ID: 1728
 # Current directory: C:/Users/sisauto/Desktop/PracticasSEA/Tutorial5/Tutorial5.runs/synth_1
 # Command line: vivado.exe -log SemiSumador.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SemiSumador.tcl
 # Log file: C:/Users/sisauto/Desktop/PracticasSEA/Tutorial5/Tutorial5.runs/synth_1/SemiSumador.vds
