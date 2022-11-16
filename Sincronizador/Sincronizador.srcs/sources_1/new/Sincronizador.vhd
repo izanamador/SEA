@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------------
 -- Company: 
 -- Engineer: 
--- 
+--
 -- Create Date: 16.11.2022 17:47:41
 -- Design Name: 
 -- Module Name: Sincronizador - Behavioral
@@ -32,16 +32,28 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Sincronizador is
-    Port(
-        I : in std_logic;
-        CKE : out std_logic;
-        reset : in std_logic;
-        clk : in std_logic);
+  Port(
+    I     : in  std_logic;
+    CKE   : out std_logic;
+    reset : in  std_logic;
+    clk   : in  std_logic);
 end Sincronizador;
 
 architecture Behavioral of Sincronizador is
-
+  signal s : std_logic;
+  component Antirrebotes is
+    port(I     :     std_logic;
+         O     : out std_logic;
+         reset : in  std_logic;
+         clk   : in  std_logic);
+  end component;
+  component CKE_Gen is
+    port(I     : in  std_logic;
+         O     : out std_logic;
+         reset : in  std_logic;
+         clk   : in  std_logic);
+  end component;
 begin
-
-
+  DB    : Antirrebotes port map (I => I, O => s, reset => reset, clk => clk);
+  CKGEN : CKE_Gen port map (I      => I, O => CKE, reset => reset, clk => clk);
 end Behavioral;
