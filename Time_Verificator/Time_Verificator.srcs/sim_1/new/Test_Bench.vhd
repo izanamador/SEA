@@ -60,18 +60,18 @@ begin
   Data : process
   begin
     -- Pulso correcto
-    q_interno <= '0';
+    D_interno <= '0';
     wait for 9 ns;
-    q_interno <= '1';
+    D_interno <= '1';
     wait for 2 ns;
-    q_interno <= '0';
+    D_interno <= '0';
 
-    wait for 19 ns;
+    wait for 18.5 ns;
 
     -- Pulso incorrecto
-    q_interno <= '1';
-    wait for 1 ns;
-    q_interno <= '0';
+    D_interno <= '1';
+    wait for 0.5 ns;
+    D_interno <= '0';
     wait;
     end process;
 end Behavioral;
