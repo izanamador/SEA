@@ -1,35 +1,25 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 16.11.2022 17:27:31
--- Design Name: 
+-- Company: Universidad de Málaga
+-- Engineer: Izan Amador, Jorge L. Benavides
+--
+-- Create Date: 23.11.2022 17:47:41
+-- Design Name: Debouncer
 -- Module Name: Reg_Des - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
+-- Project Name: Sincronizador
+-- Target Devices: Zybo 
+-- Tool Versions: Vivado 2022.1
+-- Description: Generic shift register
 -- 
 -- Dependencies: 
 -- 
--- Revision:
+-- Revision: 
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
 ----------------------------------------------------------------------------------
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity Reg_Des is
 generic(n: integer := 8);

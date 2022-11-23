@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Sincronizador.srcs/sources_1/new/Antirrebotes.vhd" \
+"../../../../Sincronizador.srcs/sources_1/new/CKE_Gen.vhd" \
+"../../../../Sincronizador.srcs/sources_1/new/Reg_Des.vhd" \
+"../../../../Sincronizador.srcs/sources_1/new/Sincronizador.vhd" \
+"../../../../Sincronizador.srcs/sim_1/imports/Downloads/Test_Bench.vhd" \
+
+# Do not sort compile order
+nosort

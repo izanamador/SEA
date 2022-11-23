@@ -1,35 +1,26 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 16.11.2022 17:25:28
--- Design Name: 
--- Module Name: Antirrebotes - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
+-- Company: Universidad de Málaga
+-- Engineer: Izan Amador, Jorge L. Benavides
+--
+-- Create Date: 23.11.2022 17:47:41
+-- Design Name: Debouncer
+-- Module Name: CKE_Gen - Behavioral
+-- Project Name: Sincronizador
+-- Target Devices: Zybo 
+-- Tool Versions: Vivado 2022.1
+-- Description: Debouncer for a button. 
 -- 
 -- Dependencies: 
 -- 
--- Revision:
+-- Revision: 
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+-- Generic pulse generator
 ----------------------------------------------------------------------------------
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity CKE_Gen is
   port(
