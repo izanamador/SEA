@@ -32,33 +32,33 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Antirrebotes is
-    port(
-        I : in std_logic;
-        O : out std_logic;
-        reset : in std_logic;
-        clk : in std_logic
+  port(
+    I     : in  std_logic;
+    O     : out std_logic;
+    reset : in  std_logic;
+    clk   : in  std_logic
     );
 end Antirrebotes;
 
 architecture Behavioral of Antirrebotes is
-signal s : std_logic_vector (3 downto 0);
+  signal s : std_logic_vector (3 downto 0);
 
-component Reg_Des is
-    generic(n: integer);
+  component Reg_Des is
+    generic(n : integer);
     port(
-        d : in std_logic;
-        q : out std_logic_vector (n-1 downto 0);
-        reset, des : in std_logic ;
-        clk : in std_logic);
-end component;        
+      d          : in  std_logic;
+      q          : out std_logic_vector (n-1 downto 0);
+      reset, des : in  std_logic;
+      clk        : in  std_logic);
+  end component;
 begin
-Registro : Reg_Des 
+  Registro : Reg_Des
     generic map (4)
     port map(
-        d => I,
-        q => s,
-        reset => reset,
-        des => '1',
-        clk => clk);
-    O <= transport '1' after 1 ns when s = "1111" else '0' after 1 ns;
+      d     => I,
+      q     => s,
+      reset => reset,
+      des   => '1',
+      clk   => clk);
+  O <= transport '1' after 1 ns when s = "1111" else '0' after 1 ns;
 end Behavioral;
