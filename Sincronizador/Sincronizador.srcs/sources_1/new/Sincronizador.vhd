@@ -22,6 +22,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity Sincronizador is
+generic (m : integer := 1);
   Port(
     I     : in  std_logic;
     CKE   : out std_logic;
@@ -46,7 +47,7 @@ architecture Behavioral of Sincronizador is
   end component;
 begin
   DB    : Antirrebotes 
-            generic map (32) -- Size of the filter
+            generic map (m) -- Size of the filter
             port map (
                    I => I, 
                    O => s, 

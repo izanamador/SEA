@@ -29,6 +29,7 @@ end Test_Bench;
 architecture Comportamiento of Test_Bench is
 
 component     Sincronizador 
+generic (m : integer := 1);
 Port(
     I     : in  std_logic;
     CKE   : out std_logic;
@@ -42,7 +43,7 @@ constant semiperiodo : time := 10 ns;
 
 begin
 
-DUT : Sincronizador port map(I => I_interno, CKE => CKE_interno, reset => reset_interno, clk => clk_interno );
+DUT : Sincronizador generic map (4) port map(I => I_interno, CKE => CKE_interno, reset => reset_interno, clk => clk_interno );
 
 -- Taken from The Student Guide to VHDL, Peter J.Asheden 
 clock_gen: process (clk_interno) is
@@ -52,13 +53,23 @@ if clk_interno = '0' then
                    '0' after 2*semiperiodo;
     end if;
     end process clock_gen;
+    
+reset: process
+begin
+reset_interno <= '0';
+wait for 5 ns;
+reset_interno <= '1';
+wait for 5 ns;
+reset_interno <= '0';
+wait;
+end process reset;
 
 Estimulos_Desde_Fichero : process
 
     file  Input_File : text;
     file Output_File : text;
     
-    variable     Input_Data : BIT_VECTOR( 1 downto 0 ) := ( OTHERS => '0' );
+    variable     Input_Data : BIT_VECTOR( 0 downto 0 ) := ( OTHERS => '0' );
     variable          Delay :      time := 0 ms;
     variable     Input_Line :      line := NULL;
     variable    Output_Line :      line := NULL;
@@ -93,8 +104,7 @@ Estimulos_Desde_Fichero : process
             if Correcto then
 
                 read( Input_Line, Input_Data );		-- El siguiente campo es el vector de pruebas.
-                I_interno <= TO_STDLOGICVECTOR( Input_Data )( 1 ); 
-                reset_interno <= TO_STDLOGICVECTOR( Input_Data )( 0 );
+                I_interno <= TO_STDLOGICVECTOR( Input_Data )( 0 ); 
 													-- De forma simultánea lo volcaremos en consola en csv.
                 write( Std_Out_Line,        Delay, right, 5 ); -- Longitud del retardo, ej. "20 ms".
                 write( Std_Out_Line,         Coma, right, 1 );
@@ -116,3 +126,5 @@ Estimulos_Desde_Fichero : process
 
 
 end Comportamiento;
+
+
