@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../sumador.srcs/sources_1/new/Sum.vhd" \
+"../../../../sumador.srcs/sim_1/new/Test_Bench.vhd" \
+
+# Do not sort compile order
+nosort

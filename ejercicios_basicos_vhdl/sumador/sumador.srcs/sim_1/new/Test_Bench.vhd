@@ -50,21 +50,17 @@ begin
       s  => s_interno);
 
   test: process
-    constant maximo : integer := 8;
   begin
-
-    for item in 0 to maximo-1 loop
+    for item in 0 to 2**n-1 loop
 
       x_interno <= std_logic_vector(to_unsigned(item,n));
 
-      for item2 in 0 to maximo-1 loop
+      for item2 in 0 to 2**n-1 loop
 
         y_interno <= std_logic_vector(to_unsigned(item2,n));
         wait for 5 ns;
 
       end loop;
-
-      -- wait for 5 ns;
 
     end loop;
 
