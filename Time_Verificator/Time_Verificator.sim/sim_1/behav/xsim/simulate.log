@@ -1,0 +1,9 @@
+Time resolution is 1 ps
+Error: No cumple el tiempo de Setup!
+Time: 30 ns  Iteration: 0  Process: /Test_Bench/DUT/Comprueba_TSUH  File: C:/Users/izana/Documents/GitHub/SEA/Time_Verificator/Time_Verificator.srcs/sources_1/new/FF_D.vhd
+Error: No cumple la anchura de pulso!
+Time: 30 ns  Iteration: 1  Process: /Test_Bench/DUT/Comprueba_TW  File: C:/Users/izana/Documents/GitHub/SEA/Time_Verificator/Time_Verificator.srcs/sources_1/new/FF_D.vhd
+Error: No cumple el tiempo de Setup!
+Time: 30 ns  Iteration: 0  Process: /Test_Bench/DUT/Comprueba_TSUH  File: C:/Users/izana/Documents/GitHub/SEA/Time_Verificator/Time_Verificator.srcs/sources_1/new/FF_D.vhd
+Error: No cumple la anchura de pulso!
+Time: 30 ns  Iteration: 1  Process: /Test_Bench/DUT/Comprueba_TW  File: C:/Users/izana/Documents/GitHub/SEA/Time_Verificator/Time_Verificator.srcs/sources_1/new/FF_D.vhd
