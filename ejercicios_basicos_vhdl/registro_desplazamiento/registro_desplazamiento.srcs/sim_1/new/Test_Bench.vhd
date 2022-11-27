@@ -43,6 +43,7 @@ architecture Behavioral of Test_Bench is
   signal d_interno, des_interno, reset_interno: std_logic := 'U';
   signal q_interno : std_logic_vector(n-1 downto 0) := (others => 'U');
   signal clk_interno : std_logic := '0';
+  signal num_decimal : std_logic_vector (n-1 downto 0) := (others => '0');
 
 begin
 
@@ -66,9 +67,34 @@ begin
 
   des_interno <= '1';
 
+reset: process
+    begin
+        reset_interno <= '0';
+            wait for 5 ns;
+        reset_interno <= '1';
+            wait for 5 ns;
+        reset_interno <= '0';
+            wait;
+end process reset;
+
+
   test: process
   begin
-    d_interno <= '1' after 5 ns, '0' after 10 ns;
+        wait for 15 ns;                                           -- Wait for reset
+        for num in 0 to 2**n-1 loop                               -- Read the decimal number
+            num_decimal <= std_logic_vector(to_unsigned(num,n));  -- Cast from integer to unsigned to std_logic
+            for index in 0 to n-1 loop                              -- Write the value bit by bit
+                d_interno <= num_decimal(index);
+                wait for 15 ns;
+            end loop;
+            
+            for index in 0 to n-1 loop                              -- Write the value bit by bit
+                            d_interno <= '0';
+                            wait for 5 ns;
+                        end loop;
+            
+        end loop;
+    wait;
 
   end process;
 end Behavioral;
