@@ -73,7 +73,7 @@ begin
 --------------------------------------------------
       when E =>
 -- Ecuación de salida:
-        y <= (others => '0');
+        y <= (others => '1');
 -- Ecuación de Transición de Estado:
         if x = x_interno_true then
           Proximo_Estado <= C;

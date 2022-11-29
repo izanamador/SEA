@@ -6,22 +6,22 @@
 # Delay Time (ns)	Input (I).
 
 # Secuencia correcta
-    15 ns		1
-    15 ns		1
-    15 ns		0
-    15 ns		1
+    25 ns		1
+    25 ns		1
+    25 ns		0
+    25 ns		1
 
 # Secuencias aleatorias (erróneas)
 # Primera secuencia
 
-    15 ns		1
-    15 ns		0
-    15 ns		1
-    15 ns		0
+    25 ns		1
+    25 ns		0
+    25 ns		1
+    25 ns		0
 
 # Segunda secuencia
 
-#    15 ns		1
+#    25 ns		1
 #    15 ns		1
 #    15 ns		1
 #    15 ns		0
