@@ -5,5 +5,5 @@
 #
 # Delay Time (ns)	Input (I).
 
-    25 ns		000
+    25 ns		011
 

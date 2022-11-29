@@ -77,20 +77,25 @@ begin
     reset_interno <= '0';
     wait;
   end process reset;
+  
+  load_value : process
+    begin
+      load_interno <= '0';
+      wait for 25 ns;
+      load_interno <= '1';
+      wait for 5 ns;
+      load_interno <= '0';
+      wait;
+    end process load_value;
 
   count_enable : process
-  begin
-
+    begin
+      ce_interno <= '0';
+      wait for 45 ns;
+      ce_interno <= '1';
+      wait;
   end process count_enable;
 
-  load_value : process
-  begin
-    load_interno <= '0';
-    wait for 35 ns;
-    load_interno <= '1';
-    wait for 5 ns;
-    load_interno <= '0';
-  end process load_value;
 
   Estimulos_Desde_Fichero : process
 

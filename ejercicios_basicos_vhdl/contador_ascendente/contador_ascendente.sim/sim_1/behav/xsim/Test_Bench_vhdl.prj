@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../contador_ascendente.srcs/sources_1/new/Contador_Asc.vhd" \
+"../../../../contador_ascendente.srcs/sim_1/new/Test_Bench.vhd" \
+
+# Do not sort compile order
+nosort
