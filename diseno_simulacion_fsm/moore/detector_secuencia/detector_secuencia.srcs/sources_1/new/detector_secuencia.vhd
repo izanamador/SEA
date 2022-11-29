@@ -1,43 +1,95 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 29.11.2022 11:59:00
--- Design Name: 
--- Module Name: detector_secuencia - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+library ieee;
+use ieee.std_logic_1164.all;
 
 entity detector_secuencia is
---  Port ( );
-end detector_secuencia;
+  generic(k : integer := 1;
+          p : integer := 1);
+  port(x      : in  std_logic_vector(k-1 downto 0);  -- k Entradas.
+       y     : out std_logic_vector(p-1 downto 0);  -- p Salidas.
+       reset : in  std_logic;
+       clk   : in  std_logic);
 
-architecture Behavioral of detector_secuencia is
+  type Estado is (A, B, C, D, E);       -- m Estados.
+
+end entity detector_secuencia;
+
+
+architecture FSM_MOORE of detector_secuencia is
+
+  signal Estado_Actual  : Estado := A;
+  signal Proximo_Estado : Estado;
 
 begin
 
+  Combinacional : process(x, Estado_Actual)
+    variable x_interno_true : std_logic_vector(k-1 downto 0) := (others => '1');
+  begin
+    case Estado_Actual is
 
-end Behavioral;
+--------------------------------------------------
+      when A =>
+-- Ecuación de salida A:
+        y <= (others => '0');
+-- Ecuación de Transición de Estado A:
+        if x = x_interno_true then
+          Proximo_Estado <= B;
+        else
+          Proximo_Estado <= A;
+        end if;
+
+--------------------------------------------------
+      when B =>
+-- Ecuación de salida B:
+        y <= (others => '0');
+-- Ecuación de Transición de Estado B:
+        if x = x_interno_true then
+          Proximo_Estado <= C;
+        else
+          Proximo_Estado <= A;
+        end if;
+
+--------------------------------------------------
+      when C =>
+-- Ecuación de salida C:
+        y <= (others => '0');
+-- Ecuación de Transición de Estado C:
+        if x = x_interno_true then
+          Proximo_Estado <= C;
+        else
+          Proximo_Estado <= D;
+        end if;
+
+--------------------------------------------------
+      when D =>
+-- Ecuación de salida:
+        y <= (others => '0');
+-- Ecuación de Transición de Estado:
+        if x = x_interno_true then
+          Proximo_Estado <= E;
+        else
+          Proximo_Estado <= A;
+        end if;
+
+--------------------------------------------------
+      when E =>
+-- Ecuación de salida:
+        y <= (others => '0');
+-- Ecuación de Transición de Estado:
+        if x = x_interno_true then
+          Proximo_Estado <= C;
+        else
+          Proximo_Estado <= A;
+        end if;
+    end case;
+  end process Combinacional;
+
+  Secuencial : process(clk, reset)
+  begin
+    if reset = '1' then
+      Estado_Actual <= A;
+    elsif rising_edge(clk) then
+      Estado_Actual <= Proximo_Estado;
+    end if;
+  end process Secuencial;
+
+end FSM_MOORE;
