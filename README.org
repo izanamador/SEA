@@ -4,8 +4,16 @@
 ** TODO [#A] Modificar todos los ejercicios de la práctica #1
 Los test bench se realizan con un archivo de estimulos.txt, modificar dichos test.
 
-*** Detalles a tener en cuenta con el contador
-Generar un top con los sincronizadores
+*** IN-PROGRESS Detalles a tener en cuenta con el contador
+- Generar un top con los sincronizadores
+- XFC Modificar conexiones
+  + PMODC: desde 1-4
+  + Reloj
+  + Botones: 3 botones
+- Consideraciones de implementación:
+  + Para simulación: 4 bits de cuenta y 4 de filtro
+  + Para síntesis: 4 bits de cuenta y 32 de filtro
+
 
 ** TODO [#A] Desarrollar una máquina de estados tipo Mealy
 
@@ -18,3 +26,4 @@ Desarrollar una contador con un registro de desplazamiento genérico realimentad
 
 ** TODO [#C] Realizar los ejercicios propuestos de forma genérica y/o con máquinas de estados
 Los ejercicios de las diapositivas de segundo, ROMS, contadores en anillo Contador Johnson, etc...
+o
