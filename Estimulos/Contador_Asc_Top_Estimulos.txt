@@ -1,0 +1,23 @@
+#Fichero de Estímulos de Contador_Asc.
+#Device Name: Discovery2NI
+#Nombre: Izan Amador, Jorge Benavides
+#Fecha: 30 de Noviembre de 2022.
+#
+# Delay Time (ns)	Input (din(3:0)).
+
+    50 ns		  0011
+#    10.5 ns		0001
+#    10.5 ns		0010
+#    10.5 ns		0011
+#    10.5 ns		0100
+#    10.5 ns		0101
+#    2.5 ns		0110
+#    3.5 ns		0111
+#    4.5 ns		1000
+#    5.5 ns		1001
+#    6.5 ns		1010
+#    7.5 ns		1011
+#    8.5 ns		1100
+#    1.5 ns		1101
+#    10.5 ns		1110
+#    10.5 ns		1111
