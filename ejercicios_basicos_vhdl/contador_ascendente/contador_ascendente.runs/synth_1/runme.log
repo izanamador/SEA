@@ -1,0 +1,256 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1275.723 ; gain = 23.898
+Command: synth_design -top top -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7740
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1275.723 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/new/top.vhd:38]
+	Parameter m bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Sincronizador' declared at 'C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Sincronizador.vhd:24' bound to instance 'Sincronizador_reset' of component 'Sincronizador' [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/new/top.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'Sincronizador' [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Sincronizador.vhd:33]
+	Parameter m bound to: 32 - type: integer 
+	Parameter m bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Antirrebotes' declared at 'C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Antirrebotes.vhd:34' bound to instance 'DB' of component 'Antirrebotes' [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Sincronizador.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'Antirrebotes' [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Antirrebotes.vhd:44]
+	Parameter m bound to: 32 - type: integer 
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Reg_Des' declared at 'C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Reg_Des.vhd:24' bound to instance 'Registro' of component 'Reg_Des' [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Antirrebotes.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'Reg_Des' [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Reg_Des.vhd:33]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Reg_Des' (0#1) [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Reg_Des.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'Antirrebotes' (0#1) [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Antirrebotes.vhd:44]
+INFO: [Synth 8-3491] module 'CKE_Gen' declared at 'C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/CKE_Gen.vhd:25' bound to instance 'CKGEN' of component 'CKE_Gen' [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Sincronizador.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'CKE_Gen' [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/CKE_Gen.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'CKE_Gen' (0#1) [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/CKE_Gen.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'Sincronizador' (0#1) [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Sincronizador.vhd:33]
+	Parameter m bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Sincronizador' declared at 'C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Sincronizador.vhd:24' bound to instance 'Sincronizador_ce' of component 'Sincronizador' [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/new/top.vhd:71]
+	Parameter m bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Sincronizador' declared at 'C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Sincronizador.vhd:24' bound to instance 'Sincronizador_load' of component 'Sincronizador' [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/new/top.vhd:78]
+	Parameter n bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'Contador_Asc' declared at 'C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/new/Contador_Asc.vhd:25' bound to instance 'Contador' of component 'Contador_Asc' [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/new/top.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'Contador_Asc' [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/new/Contador_Asc.vhd:34]
+	Parameter n bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Contador_Asc' (0#1) [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/new/Contador_Asc.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/new/top.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1275.723 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1275.723 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1275.723 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1275.723 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/constrs_1/imports/Templates/ZYBO_MASTER.xdc]
+Finished Parsing XDC File [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/constrs_1/imports/Templates/ZYBO_MASTER.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/constrs_1/imports/Templates/ZYBO_MASTER.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1303.566 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1303.566 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'EA_reg' in module 'CKE_Gen'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     e_1 |                               00 |                               00
+                     e_2 |                               01 |                               01
+                     e_3 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'EA_reg' using encoding 'sequential' in module 'CKE_Gen'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    4 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT2 |     2|
+|3     |LUT3 |     6|
+|4     |LUT4 |     3|
+|5     |LUT5 |     1|
+|6     |LUT6 |     2|
+|7     |FDCE |     4|
+|8     |FDRE |     6|
+|9     |IBUF |     8|
+|10    |OBUF |     5|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1303.566 ; gain = 27.844
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 1303.566 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1303.566 ; gain = 27.844
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1303.566 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1303.566 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 3cb5f970
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:48 . Memory (MB): peak = 1303.566 ; gain = 27.844
+INFO: [Common 17-1381] The checkpoint 'C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 30 16:45:34 2022...
