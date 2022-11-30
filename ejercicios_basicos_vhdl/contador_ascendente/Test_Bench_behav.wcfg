@@ -10,41 +10,64 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="784.001 ns"></ZoomEndTime>
-      <Cursor1Time time="200.000 ns"></Cursor1Time>
+      <ZoomStartTime time="1,050.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,680.501 ns"></ZoomEndTime>
+      <Cursor1Time time="1,349.500 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="206"></NameColumnWidth>
-      <ValueColumnWidth column_width="94"></ValueColumnWidth>
+      <NameColumnWidth column_width="203"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="7" />
-   <wvobject fp_name="/Test_Bench/clk_interno" type="logic">
-      <obj_property name="ElementShortName">clk_interno</obj_property>
-      <obj_property name="ObjectShortName">clk_interno</obj_property>
+   <WVObjectSize size="12" />
+   <wave_markers>
+      <marker time="1310500" label="" />
+   </wave_markers>
+   <wvobject fp_name="/Test_Bench/DUT/jc_in" type="array">
+      <obj_property name="ElementShortName">jc_in[3:0]</obj_property>
+      <obj_property name="ObjectShortName">jc_in[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Test_Bench/reset_interno" type="logic">
-      <obj_property name="ElementShortName">reset_interno</obj_property>
-      <obj_property name="ObjectShortName">reset_interno</obj_property>
+   <wvobject fp_name="/Test_Bench/DUT/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/Test_Bench/din_interno" type="array">
-      <obj_property name="ElementShortName">din_interno[2:0]</obj_property>
-      <obj_property name="ObjectShortName">din_interno[2:0]</obj_property>
+   <wvobject fp_name="/Test_Bench/DUT/ce" type="logic">
+      <obj_property name="ElementShortName">ce</obj_property>
+      <obj_property name="ObjectShortName">ce</obj_property>
    </wvobject>
-   <wvobject fp_name="/Test_Bench/dout_interno" type="array">
-      <obj_property name="ElementShortName">dout_interno[2:0]</obj_property>
-      <obj_property name="ObjectShortName">dout_interno[2:0]</obj_property>
+   <wvobject fp_name="/Test_Bench/DUT/load" type="logic">
+      <obj_property name="ElementShortName">load</obj_property>
+      <obj_property name="ObjectShortName">load</obj_property>
    </wvobject>
-   <wvobject fp_name="/Test_Bench/ce_interno" type="logic">
+   <wvobject fp_name="/Test_Bench/DUT/ce_interno" type="logic">
       <obj_property name="ElementShortName">ce_interno</obj_property>
       <obj_property name="ObjectShortName">ce_interno</obj_property>
    </wvobject>
-   <wvobject fp_name="/Test_Bench/load_interno" type="logic">
+   <wvobject fp_name="/Test_Bench/DUT/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench/DUT/jd_out" type="array">
+      <obj_property name="ElementShortName">jd_out[3:0]</obj_property>
+      <obj_property name="ObjectShortName">jd_out[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench/DUT/fdc" type="logic">
+      <obj_property name="ElementShortName">fdc</obj_property>
+      <obj_property name="ObjectShortName">fdc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench/DUT/reset_interno" type="logic">
+      <obj_property name="ElementShortName">reset_interno</obj_property>
+      <obj_property name="ObjectShortName">reset_interno</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench/DUT/load_interno" type="logic">
       <obj_property name="ElementShortName">load_interno</obj_property>
       <obj_property name="ObjectShortName">load_interno</obj_property>
    </wvobject>
-   <wvobject fp_name="/Test_Bench/fdc_interno" type="logic">
-      <obj_property name="ElementShortName">fdc_interno</obj_property>
-      <obj_property name="ObjectShortName">fdc_interno</obj_property>
+   <wvobject fp_name="/Test_Bench/DUT/counter_size" type="other">
+      <obj_property name="ElementShortName">counter_size</obj_property>
+      <obj_property name="ObjectShortName">counter_size</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench/DUT/filter_size" type="other">
+      <obj_property name="ElementShortName">filter_size</obj_property>
+      <obj_property name="ObjectShortName">filter_size</obj_property>
    </wvobject>
 </wave_config>

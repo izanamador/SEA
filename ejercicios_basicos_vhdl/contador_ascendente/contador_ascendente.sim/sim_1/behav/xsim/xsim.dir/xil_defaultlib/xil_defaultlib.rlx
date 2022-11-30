@@ -2,5 +2,10 @@
 2020.2
 Apr 18 2022
 16:05:34
-C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sim_1/new/Test_Bench.vhd,1669716689,vhdl,,,,test_bench,,,,,,,,
+C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sim_1/new/Test_Bench_top.vhd,1669821874,vhdl,,,,test_bench,,,,,,,,
+C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Antirrebotes.vhd,1669200031,vhdl,,,,antirrebotes,,,,,,,,
+C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/CKE_Gen.vhd,1669201527,vhdl,,,,cke_gen,,,,,,,,
+C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Reg_Des.vhd,1669201460,vhdl,,,,reg_des,,,,,,,,
+C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Sincronizador.vhd,1669213675,vhdl,,,,sincronizador,,,,,,,,
 C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/new/Contador_Asc.vhd,1669716092,vhdl,,,,contador_asc,,,,,,,,
+C:/Users/izana/Documents/GitHub/SEA/ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/new/top.vhd,1669808493,vhdl,,,,top,,,,,,,,

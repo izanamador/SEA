@@ -56,11 +56,13 @@ architecture Comportamiento of Test_Bench is
   constant counter_size: integer := 4;
   constant filter_size : integer := 4;
   signal jc_in_interno : std_logic_vector(counter_size-1 downto 0) := (others => 'U');
-  signal reset_interno, ce_interno, load_interno, clk_interno, fdc_interno : std_logic := 'U';
+  signal reset_interno, fdc_interno : std_logic := 'U';
+  signal clk_interno, ce_interno, load_interno : std_logic := '0';
   signal jd_out_interno : std_logic_vector(counter_size-1 downto 0) := (others => 'U');
 begin
 
   DUT : top
+  generic map (counter_size, filter_size)
     port map(
       jc_in  => jc_in_interno,
       reset  => reset_interno,
@@ -81,28 +83,30 @@ begin
   reset: process
   begin
     reset_interno <= '0';
-    wait for 4*periodo;
+    wait for 2*periodo;
     reset_interno <= '1';
-    wait for 4*periodo;
+    wait for 1*periodo;
     reset_interno <= '0';
     wait;
   end process reset;
 
-  ce: process
-  begin
-    ce_interno <= '1';
-    wait;
-  end process ce;
+  
+  load: process (load_interno) is
+    begin
+      if load_interno = '0' then
+        load_interno <= '1' after 200*periodo,
+                       '0' after 201*periodo;
+      end if;
+    end process load;
 
-  load: process
-  begin
-    load_interno <= '0';
-    wait for 8*periodo;
-    load_interno <= '1';
-    wait for 8*periodo;
-    load_interno <= '0';
-    wait;
-  end process load;
+  
+  ce: process (ce_interno) is
+    begin
+      if ce_interno = '0' then
+        ce_interno <= '1' after 2*periodo,
+                       '0' after 4*periodo;
+      end if;
+    end process ce;
 
 
   Estimulos_Desde_Fichero : process
