@@ -11,6 +11,6 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
-Compiling architecture a of entity xil_defaultlib.Reg_Des [\Reg_Des(n=2)\]
+Compiling architecture a of entity xil_defaultlib.Reg_Des [\Reg_Des(n=4)\]
 Compiling architecture behavioral of entity xil_defaultlib.test_bench
 Built simulation snapshot Test_Bench_behav

@@ -38,7 +38,7 @@ architecture Behavioral of Test_Bench is
       clk        : in  std_logic);
   end Component Reg_Des;
 
-  constant n : integer := 2;
+  constant n : integer := 4;
   constant semiperiodo : time := 10 ns;
   signal d_interno, des_interno, reset_interno: std_logic := 'U';
   signal q_interno : std_logic_vector(n-1 downto 0) := (others => 'U');
@@ -77,7 +77,7 @@ reset: process
             wait;
 end process reset;
 
-
+-- only make the process with d_interno; No need for sum
   test: process
   begin
         wait for 15 ns;                                           -- Wait for reset
@@ -85,7 +85,7 @@ end process reset;
             num_decimal <= std_logic_vector(to_unsigned(num,n));  -- Cast from integer to unsigned to std_logic
             for index in 0 to n-1 loop                            -- Write the value bit by bit
                 d_interno <= num_decimal(index);                  --
-                wait for semiperiodo*2;                           --
+                wait for semiperiodo*2;                           --  
             end loop;
             
            --wait for n*semiperiodo; 

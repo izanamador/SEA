@@ -11,14 +11,22 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="200.001 ns"></ZoomEndTime>
+      <ZoomEndTime time="784.001 ns"></ZoomEndTime>
       <Cursor1Time time="200.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="206"></NameColumnWidth>
-      <ValueColumnWidth column_width="99"></ValueColumnWidth>
+      <ValueColumnWidth column_width="94"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/Test_Bench/clk_interno" type="logic">
+      <obj_property name="ElementShortName">clk_interno</obj_property>
+      <obj_property name="ObjectShortName">clk_interno</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench/reset_interno" type="logic">
+      <obj_property name="ElementShortName">reset_interno</obj_property>
+      <obj_property name="ObjectShortName">reset_interno</obj_property>
+   </wvobject>
    <wvobject fp_name="/Test_Bench/din_interno" type="array">
       <obj_property name="ElementShortName">din_interno[2:0]</obj_property>
       <obj_property name="ObjectShortName">din_interno[2:0]</obj_property>
@@ -26,10 +34,6 @@
    <wvobject fp_name="/Test_Bench/dout_interno" type="array">
       <obj_property name="ElementShortName">dout_interno[2:0]</obj_property>
       <obj_property name="ObjectShortName">dout_interno[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/reset_interno" type="logic">
-      <obj_property name="ElementShortName">reset_interno</obj_property>
-      <obj_property name="ObjectShortName">reset_interno</obj_property>
    </wvobject>
    <wvobject fp_name="/Test_Bench/ce_interno" type="logic">
       <obj_property name="ElementShortName">ce_interno</obj_property>
@@ -42,17 +46,5 @@
    <wvobject fp_name="/Test_Bench/fdc_interno" type="logic">
       <obj_property name="ElementShortName">fdc_interno</obj_property>
       <obj_property name="ObjectShortName">fdc_interno</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/clk_interno" type="logic">
-      <obj_property name="ElementShortName">clk_interno</obj_property>
-      <obj_property name="ObjectShortName">clk_interno</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/semiperiodo" type="other">
-      <obj_property name="ElementShortName">semiperiodo</obj_property>
-      <obj_property name="ObjectShortName">semiperiodo</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/n" type="other">
-      <obj_property name="ElementShortName">n</obj_property>
-      <obj_property name="ObjectShortName">n</obj_property>
    </wvobject>
 </wave_config>

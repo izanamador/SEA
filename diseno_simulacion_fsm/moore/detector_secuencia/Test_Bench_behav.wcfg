@@ -11,14 +11,22 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="150.001 ns"></ZoomEndTime>
-      <Cursor1Time time="0.000 ns"></Cursor1Time>
+      <ZoomEndTime time="200.001 ns"></ZoomEndTime>
+      <Cursor1Time time="200.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="220"></NameColumnWidth>
-      <ValueColumnWidth column_width="106"></ValueColumnWidth>
+      <ValueColumnWidth column_width="101"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/Test_Bench/clk_interno" type="logic">
+      <obj_property name="ElementShortName">clk_interno</obj_property>
+      <obj_property name="ObjectShortName">clk_interno</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench/reset_interno" type="logic">
+      <obj_property name="ElementShortName">reset_interno</obj_property>
+      <obj_property name="ObjectShortName">reset_interno</obj_property>
+   </wvobject>
    <wvobject fp_name="/Test_Bench/x_interno" type="array">
       <obj_property name="ElementShortName">x_interno[0:0]</obj_property>
       <obj_property name="ObjectShortName">x_interno[0:0]</obj_property>
@@ -26,26 +34,6 @@
    <wvobject fp_name="/Test_Bench/y_interno" type="array">
       <obj_property name="ElementShortName">y_interno[0:0]</obj_property>
       <obj_property name="ObjectShortName">y_interno[0:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/reset_interno" type="logic">
-      <obj_property name="ElementShortName">reset_interno</obj_property>
-      <obj_property name="ObjectShortName">reset_interno</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/clk_interno" type="logic">
-      <obj_property name="ElementShortName">clk_interno</obj_property>
-      <obj_property name="ObjectShortName">clk_interno</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/semiperiodo" type="other">
-      <obj_property name="ElementShortName">semiperiodo</obj_property>
-      <obj_property name="ObjectShortName">semiperiodo</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/k" type="other">
-      <obj_property name="ElementShortName">k</obj_property>
-      <obj_property name="ObjectShortName">k</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/p" type="other">
-      <obj_property name="ElementShortName">p</obj_property>
-      <obj_property name="ObjectShortName">p</obj_property>
    </wvobject>
    <wvobject fp_name="/Test_Bench/DUT/Estado_Actual" type="other">
       <obj_property name="ElementShortName">Estado_Actual</obj_property>
