@@ -1,0 +1,20 @@
+#+title: Sistemas electrónicos para la automatización
+* Listas de ejercicios propuestos
+
+** TODO [#A] Modificar todos los ejercicios de la práctica #1
+Los test bench se realizan con un archivo de estimulos.txt, modificar dichos test.
+
+*** Detalles a tener en cuenta con el contador
+Generar un top con los sincronizadores
+
+** TODO [#A] Desarrollar una máquina de estados tipo Mealy
+
+** TODO [#B] Contador mediante una FSM
+Definir un proceso combinacional y un proceso secuencial
+Típicamente esta máquina se modela como Moore.
+
+** TODO [#B] Contador "fino"
+Desarrollar una contador con un registro de desplazamiento genérico realimentado
+
+** TODO [#C] Realizar los ejercicios propuestos de forma genérica y/o con máquinas de estados
+Los ejercicios de las diapositivas de segundo, ROMS, contadores en anillo Contador Johnson, etc...
