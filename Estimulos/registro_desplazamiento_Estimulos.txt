@@ -5,11 +5,11 @@
 #
 # Delay Time (ns)	Input (I).
 
-  10 ns 0
-  10 ns 1
-  10 ns 1
-  10 ns 1
-  10 ns 0
-  10 ns 0
-  10 ns 1
-  10 ns 0
+  20 ns 0
+  20 ns 1
+  20 ns 0
+  20 ns 1
+  20 ns 0
+  20 ns 1
+  20 ns 0
+  20 ns 1

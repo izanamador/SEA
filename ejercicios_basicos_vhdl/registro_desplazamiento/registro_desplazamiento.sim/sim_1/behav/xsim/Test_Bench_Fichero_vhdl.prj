@@ -1,7 +1,7 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
 "../../../../registro_desplazamiento.srcs/sources_1/new/Reg_Des.vhd" \
-"../../../../registro_desplazamiento.srcs/sim_1/new/Test_Bench.vhd" \
+"../../../../registro_desplazamiento.srcs/sim_1/new/Test_Bench_Fichero.vhd" \
 
 # Do not sort compile order
 nosort

@@ -38,14 +38,14 @@ end Test_Bench_Fichero;
 
 architecture Comportamiento of Test_Bench_Fichero is
 
-  component Sum
+  component Reg_Des
     generic(n : integer := 8);
     port(
       d          : in  std_logic;
       q          : out std_logic_vector(n-1 downto 0);
       reset, des : in  std_logic;
       clk        : in  std_logic);
-  end Component Sum;
+  end Component Reg_Des;
 
   constant semiperiodo : time := 10 ns;
   constant periodo : time := 2*semiperiodo;
@@ -56,7 +56,7 @@ architecture Comportamiento of Test_Bench_Fichero is
 
 begin
 
-  DUT : Sum
+  DUT : Reg_Des
     generic map (n)
     port map(
       d => d_interno,
@@ -73,16 +73,8 @@ begin
     end if;
   end process clock_gen;
 
-  des: process
-  begin
-    des_interno <= '1';
-    wait for 2*periodo;
-    des_interno <= '0';
-    wait for 1*periodo;
-    reset_interno <= '1';
-    wait;
-  end process des;
-
+  des_interno <= '1';
+ 
   reset: process
   begin
     reset_interno <= '0';

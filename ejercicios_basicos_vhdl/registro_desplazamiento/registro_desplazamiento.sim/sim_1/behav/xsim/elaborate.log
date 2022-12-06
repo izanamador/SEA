@@ -1,6 +1,6 @@
 Vivado Simulator v2022.1
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Test_Bench_behav xil_defaultlib.Test_Bench -log elaborate.log 
+Running: D:/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Test_Bench_Fichero_behav xil_defaultlib.Test_Bench_Fichero -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,7 +10,6 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture a of entity xil_defaultlib.Reg_Des [\Reg_Des(n=4)\]
-Compiling architecture behavioral of entity xil_defaultlib.test_bench
-Built simulation snapshot Test_Bench_behav
+Compiling architecture a of entity xil_defaultlib.Reg_Des [\Reg_Des(n=2)\]
+Compiling architecture comportamiento of entity xil_defaultlib.test_bench_fichero
+Built simulation snapshot Test_Bench_Fichero_behav

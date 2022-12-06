@@ -3,46 +3,50 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="Test_Bench_behav.wdb" id="1">
+      <db_ref path="Test_Bench_Fichero_behav.wdb" id="1">
          <top_modules>
-            <top_module name="Test_Bench" />
+            <top_module name="Test_Bench_Fichero" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,000.001 ns"></ZoomEndTime>
-      <Cursor1Time time="257.000 ns"></Cursor1Time>
+      <ZoomEndTime time="150.001 ns"></ZoomEndTime>
+      <Cursor1Time time="143.253 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="242"></NameColumnWidth>
-      <ValueColumnWidth column_width="102"></ValueColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
-   <wvobject fp_name="/Test_Bench/clk_interno" type="logic">
+   <WVObjectSize size="5" />
+   <wvobject fp_name="/Test_Bench_Fichero/clk_interno" type="logic">
       <obj_property name="ElementShortName">clk_interno</obj_property>
       <obj_property name="ObjectShortName">clk_interno</obj_property>
    </wvobject>
-   <wvobject fp_name="/Test_Bench/reset_interno" type="logic">
+   <wvobject fp_name="/Test_Bench_Fichero/reset_interno" type="logic">
       <obj_property name="ElementShortName">reset_interno</obj_property>
       <obj_property name="ObjectShortName">reset_interno</obj_property>
+      <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/Test_Bench/d_interno" type="logic">
-      <obj_property name="ElementShortName">d_interno</obj_property>
-      <obj_property name="ObjectShortName">d_interno</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/des_interno" type="logic">
-      <obj_property name="ElementShortName">des_interno</obj_property>
-      <obj_property name="ObjectShortName">des_interno</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/q_interno" type="array">
+   <wvobject fp_name="/Test_Bench_Fichero/q_interno" type="array">
       <obj_property name="ElementShortName">q_interno[1:0]</obj_property>
       <obj_property name="ObjectShortName">q_interno[1:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
-   <wvobject fp_name="/Test_Bench/num_decimal" type="array">
-      <obj_property name="ElementShortName">num_decimal[1:0]</obj_property>
-      <obj_property name="ObjectShortName">num_decimal[1:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+   <wvobject fp_name="/Test_Bench_Fichero/des_interno" type="logic">
+      <obj_property name="ElementShortName">des_interno</obj_property>
+      <obj_property name="ObjectShortName">des_interno</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench_Fichero/d_interno" type="logic">
+      <obj_property name="ElementShortName">d_interno</obj_property>
+      <obj_property name="ObjectShortName">d_interno</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>
