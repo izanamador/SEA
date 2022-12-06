@@ -1,7 +1,7 @@
 #Fichero de Estímulos de Sincronizador.
 #Device Name: Discovery2NI
 #Nombre: Izan Amador, Jorge Benavides
-#Fecha: 23 de Noviembre de 2022.
+#Fecha: 6 de Diciembre de 2022.
 #
 # Delay Time (ns)	Input (I).
 
