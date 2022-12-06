@@ -3,25 +3,11 @@
 #Nombre: Izan Amador, Jorge Benavides
 #Fecha: 6 de Diciembre de 2022.
 #
-# Delay Time (ns)	Input (I).
+# Delay Time (ns)	Input (x0,x1,sel).
 
-# Secuencia correcta
-    25 ns		1
-    25 ns		1
-    25 ns		0
-    25 ns		1
-
-# Secuencias aleatorias (erróneas)
-# Primera secuencia
-
-    25 ns		1
-    25 ns		0
-    25 ns		1
-    25 ns		0
-
-# Segunda secuencia
-
-#    25 ns		1
-#    15 ns		1
-#    15 ns		1
-#    15 ns		0
+  10 ns 010
+  10 ns 011
+  10 ns 010
+  10 ns 011
+  10 ns 010
+  10 ns 011
