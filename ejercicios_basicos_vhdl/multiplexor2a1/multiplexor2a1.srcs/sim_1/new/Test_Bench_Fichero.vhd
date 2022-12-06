@@ -32,11 +32,11 @@ use STD.textIO.ALL;                     -- Se va a hacer uso de ficheros.
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Test_Bench is
+entity Test_Bench_Fichero is
 --  Port ( );
-end Test_Bench;
+end Test_Bench_Fichero;
 
-architecture Comportamiento of Test_Bench is
+architecture Comportamiento of Test_Bench_Fichero is
 
   component MuxV_2a1
     generic(
@@ -104,9 +104,9 @@ begin
         read(Input_Line, Input_Data);  -- El siguiente campo es el vector de pruebas.
         -- Der a Izq
 
-        x0_interno <= TO_STDLOGICVECTOR(Input_Data)(0);
-        x1_interno <= TO_STDLOGICVECTOR(Input_Data)(1);
-        sel_interno <= TO_STDLOGICVECTOR(Input_Data)(2);
+        x0_interno <= TO_STDLOGICVECTOR(Input_Data)(2 downto 2);
+        x1_interno <= TO_STDLOGICVECTOR(Input_Data)(1 downto 1);
+        sel_interno <= TO_STDLOGICVECTOR(Input_Data)(0);
 
         -- De forma simultánea lo volcaremos en consola en csv.
         write(Std_Out_Line, Delay, right, 5);  -- Longitud del retardo, ej. "20 ms".
