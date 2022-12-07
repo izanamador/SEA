@@ -44,10 +44,11 @@ architecture Comportamiento of Test_Bench_Fichero is
 
 
   constant semiperiodo : time    := 10 ns;
-  constant N_Bits_Dir  : natural := 1;
+  constant N_Bits_Dir  : natural := 3;
+  constant n : integer := 3;
 
   signal Direccion_interno : std_logic_vector (N_Bits_Dir - 1 downto 0) := (others => 'U');
-  signal Dato_interno : std_logic_vector(N_Bits_Dato downto 0):= (others => 'U');
+  signal Dato_interno : std_logic_vector(N_Bits_Dato - 1 downto 0):= (others => 'U');
   signal Tabla_ROM_interno : Tabla(0 to 2**N_Bits_Dir-1) :=
     (('1','0','1','0','1','0','1','0'),
      b"1011_1011", -- si no se indica la "b" no sería correcto
@@ -61,14 +62,14 @@ architecture Comportamiento of Test_Bench_Fichero is
 
 begin
 
-  DUT : MUX
+  DUT1 : MUX
     generic map (N_Bits_Dir)
     port map(
       Direccion => Direccion_interno,
       Dato => Dato_interno,
       Tabla_ROM => Tabla_ROM_interno);
 
-  DUT : ROM
+  DUT2 : ROM
     generic map (N_Bits_Dir)
     port map (
       Direccion => Direccion_interno,
@@ -80,7 +81,7 @@ begin
     file Input_File  : text;
     file Output_File : text;
 
-    variable Input_Data   : BIT_VECTOR(k-1 downto 0) := (OTHERS => '0');
+    variable Input_Data   : BIT_VECTOR(n-1 downto 0) := (OTHERS => '0');
     variable Delay        : time                   := 0 ms;
     variable Input_Line   : line                   := NULL;
     variable Output_Line  : line                   := NULL;
@@ -91,10 +92,10 @@ begin
 
   begin
 
--- detector_secuencia_Estimulos.txt contiene los estímulos y los tiempos de retardo para el semisumador.
-    file_open(Input_File, "C:\Users\izana\Documents\GitHub\SEA\Estimulos\detector_secuencia_Estimulos.txt", read_mode);
--- detector_secuencia_Estimulos.csv contiene los estímulos y los tiempos de retardo para el Analog Discovery 2.
-    file_open(Output_File, "C:\Users\izana\Documents\GitHub\SEA\CSV\detector_secuencia_Estimulos.csv", write_mode);
+-- rom_mux_Estimulos.txt contiene los estímulos y los tiempos de retardo para el semisumador.
+    file_open(Input_File, "C:\Users\izana\Documents\GitHub\SEA\Estimulos\rom_mux_Estimulos.txt", read_mode);
+-- rom_mux_Estimulos.csv contiene los estímulos y los tiempos de retardo para el Analog Discovery 2.
+    file_open(Output_File, "C:\Users\izana\Documents\GitHub\SEA\CSV\rom_mux_Estimulos.csv", write_mode);
 
 -- Titles: Son para el formato EXCEL *.CSV (Comma Separated Values):
     write(Std_Out_Line, string'("Retardo"), right, 7);
@@ -115,7 +116,7 @@ begin
       if Correcto then
 
         read(Input_Line, Input_Data);  -- El siguiente campo es el vector de pruebas.
-        x_interno <= TO_STDLOGICVECTOR(Input_Data);
+        Direccion_interno <= TO_STDLOGICVECTOR(Input_Data)(2 downto 0);
         -- De forma simultánea lo volcaremos en consola en csv.
         write(Std_Out_Line, Delay, right, 5);  -- Longitud del retardo, ej. "20 ms".
         write(Std_Out_Line, Coma, right, 1);
