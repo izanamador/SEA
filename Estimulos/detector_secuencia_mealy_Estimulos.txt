@@ -1,0 +1,33 @@
+#Fichero de Estímulos de detector secuencia mealy.
+#Device Name: Discovery2NI
+#Nombre: Izan Amador, Jorge Benavides
+#Fecha: 29 de Noviembre de 2022.
+#
+# Delay Time (ns)	Input (I).
+
+# Secuencia correcta
+    25 ns		1
+    25 ns		0
+    25 ns		1
+    25 ns		0
+    25 ns		0
+    25 ns		1
+
+# Secuencias aleatorias (erróneas)
+# Primera secuencia
+
+    25 ns		0
+    25 ns		0
+    25 ns		1
+    25 ns		1
+    25 ns		0
+    25 ns		1
+
+# Segunda secuencia
+
+    25 ns		1
+    25 ns		1
+    25 ns		0
+    25 ns		0
+    25 ns		0
+    25 ns		1
