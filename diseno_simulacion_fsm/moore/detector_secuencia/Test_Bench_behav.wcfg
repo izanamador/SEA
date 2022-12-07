@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="200.001 ns"></ZoomEndTime>
+      <ZoomEndTime time="250.001 ns"></ZoomEndTime>
       <Cursor1Time time="200.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="220"></NameColumnWidth>
-      <ValueColumnWidth column_width="101"></ValueColumnWidth>
+      <ValueColumnWidth column_width="96"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="7" />
    <wvobject fp_name="/Test_Bench/clk_interno" type="logic">
       <obj_property name="ElementShortName">clk_interno</obj_property>
       <obj_property name="ObjectShortName">clk_interno</obj_property>
@@ -27,20 +27,32 @@
       <obj_property name="ElementShortName">reset_interno</obj_property>
       <obj_property name="ObjectShortName">reset_interno</obj_property>
    </wvobject>
+   <wvobject fp_name="/Test_Bench/cke_interno" type="logic">
+      <obj_property name="ElementShortName">cke_interno</obj_property>
+      <obj_property name="ObjectShortName">cke_interno</obj_property>
+   </wvobject>
    <wvobject fp_name="/Test_Bench/x_interno" type="array">
       <obj_property name="ElementShortName">x_interno[0:0]</obj_property>
       <obj_property name="ObjectShortName">x_interno[0:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/Test_Bench/y_interno" type="array">
       <obj_property name="ElementShortName">y_interno[0:0]</obj_property>
       <obj_property name="ObjectShortName">y_interno[0:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/Test_Bench/DUT/Estado_Actual" type="other">
       <obj_property name="ElementShortName">Estado_Actual</obj_property>
       <obj_property name="ObjectShortName">Estado_Actual</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/Test_Bench/DUT/Proximo_Estado" type="other">
       <obj_property name="ElementShortName">Proximo_Estado</obj_property>
       <obj_property name="ObjectShortName">Proximo_Estado</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>
