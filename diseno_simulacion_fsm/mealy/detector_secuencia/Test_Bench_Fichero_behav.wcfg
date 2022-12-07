@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Test_Bench_Fichero_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Test_Bench_Fichero" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="718.501 ns"></ZoomEndTime>
+      <Cursor1Time time="695.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="290"></NameColumnWidth>
+      <ValueColumnWidth column_width="141"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/Test_Bench_Fichero/clk_interno" type="logic">
+      <obj_property name="ElementShortName">clk_interno</obj_property>
+      <obj_property name="ObjectShortName">clk_interno</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench_Fichero/reset_interno" type="logic">
+      <obj_property name="ElementShortName">reset_interno</obj_property>
+      <obj_property name="ObjectShortName">reset_interno</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench_Fichero/cke_interno" type="logic">
+      <obj_property name="ElementShortName">cke_interno</obj_property>
+      <obj_property name="ObjectShortName">cke_interno</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench_Fichero/x_interno" type="logic">
+      <obj_property name="ElementShortName">x_interno</obj_property>
+      <obj_property name="ObjectShortName">x_interno</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench_Fichero/y_interno" type="logic">
+      <obj_property name="ElementShortName">y_interno</obj_property>
+      <obj_property name="ObjectShortName">y_interno</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench_Fichero/DUT/Estado_Actual" type="other">
+      <obj_property name="ElementShortName">Estado_Actual</obj_property>
+      <obj_property name="ObjectShortName">Estado_Actual</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench_Fichero/DUT/Proximo_Estado" type="other">
+      <obj_property name="ElementShortName">Proximo_Estado</obj_property>
+      <obj_property name="ObjectShortName">Proximo_Estado</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+</wave_config>

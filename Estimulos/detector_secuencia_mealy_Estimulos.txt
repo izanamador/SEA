@@ -5,13 +5,15 @@
 #
 # Delay Time (ns)	Input (I).
 
+# Wait for reset 
+    40 ns		0
 # Secuencia correcta
-    25 ns		1
-    25 ns		0
-    25 ns		1
-    25 ns		0
-    25 ns		0
-    25 ns		1
+    20 ns		1
+    20 ns		0
+    20 ns		1
+    20 ns		0
+    20 ns		0
+    20 ns		1
 
 # Secuencias aleatorias (erróneas)
 # Primera secuencia
