@@ -1,43 +1,30 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 07.12.2022 15:32:44
--- Design Name: 
--- Module Name: Mi_Logica_TB - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
+use work.Mis_Tipos.all;  -- La biblioteca lógica WORK es implícita en cada diseño.
 
+entity Mi_Logica_TB is   -- Por tanto todos mis packages pertenecen a ella.
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
-entity Mi_Logica_TB is
---  Port ( );
 end Mi_Logica_TB;
 
-architecture Behavioral of Mi_Logica_TB is
+architecture Comportamiento of Mi_Logica_TB is
+
+  signal s_sr     : Mi_Logica          := 'U';  -- Señales sin resolver (sr).
+  signal s_r      : Mi_Logica_Resuelta := 'U';  -- Señales resueltas (r).
 
 begin
 
+  Bus_End_Point_1 : process  -- Fuente 1 para la señal resuelta (genera un driver).
+  begin
+    --¡Esta línea no compilará!
+    s_sr <= '0' after 5 ns, '1' after 10 ns, 'X' after 12 ns;
+    s_r  <= '0' after 5 ns, '1' after 10 ns, 'X' after 20 ns;
+    wait;
+  end process Bus_End_Point_1;
 
-end Behavioral;
+  Bus_End_Point_2 : process  --Fuente 2 para la señal resuelta (otro driver).
+  begin
+    -- ¡Esta línea no compilará!
+    s_sr <= '0' after 5 ns, '1' after 12 ns, 'X' after 15 ns;
+    s_r  <= '0' after 5 ns, '1' after 12 ns, 'X' after 15 ns;
+    wait;
+  end process Bus_End_Point_2;
+
+end Comportamiento;
