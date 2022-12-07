@@ -1,21 +1,20 @@
-----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Company: Universidad de Málaga
+-- Engineer: Izan Amador, Jorge L. Benavides
 --
--- Create Date: 19.10.2020 12:14:30
--- Design Name:
--- Module Name: Test_Bench - Comportamiento
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
+-- Create Date: 23.11.2022 17:47:41
+-- Design Name: Test_Bench
+-- Module Name: Test_Bench_Mealy - Comportamiento
+-- Project Name: multiplexor2a1
+-- Target Devices: Zybo
+-- Tool Versions: Vivado 2022.1
+-- Description: Test bench for A basic multiplexer 2 inputs.
 --
 -- Dependencies:
 --
 -- Revision:
--- Revision 0.01 - File Created
+-- Revision 0.02 - File revised
 -- Additional Comments:
---
 ----------------------------------------------------------------------------------
 
 

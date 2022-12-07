@@ -1,22 +1,22 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company: Universidad de Málaga
+-- Engineer: Izan Amador, Jorge L. Benavides
 --
--- Create Date: 26.11.2022 16:14:50
--- Design Name:
+-- Create Date: 23.11.2022 17:47:41
+-- Design Name: MuxV_2a1
 -- Module Name: MuxV_2a1 - Behavioral
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
+-- Project Name: multiplexor2a1
+-- Target Devices: Zybo
+-- Tool Versions: Vivado 2022.1
+-- Description: A basic multiplexer 2 inputs.
 --
 -- Dependencies:
 --
 -- Revision:
--- Revision 0.01 - File Created
+-- Revision 0.02 - File revised
 -- Additional Comments:
---
 ----------------------------------------------------------------------------------
+
 
 library ieee;
 use ieee.std_logic_1164.all;
