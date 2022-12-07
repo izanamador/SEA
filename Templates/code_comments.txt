@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------
+-- Company: Universidad de Málaga
+-- Engineer: Izan Amador, Jorge L. Benavides
+--
+-- Create Date: 23.11.2022 17:47:41
+-- Design Name: Debouncer
+-- Module Name: Sincronizador - Behavioral
+-- Project Name: Sincronizador
+-- Target Devices: Zybo 
+-- Tool Versions: Vivado 2022.1
+-- Description: Debouncer for a button. 
+-- 
+-- Dependencies: 
+-- 
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- Generic size filter m
+----------------------------------------------------------------------------------
