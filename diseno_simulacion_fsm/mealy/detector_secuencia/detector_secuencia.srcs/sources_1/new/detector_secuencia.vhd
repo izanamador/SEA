@@ -1,23 +1,22 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 06.12.2022 11:39:15
--- Design Name: 
+-- Company: Universidad de M�laga
+-- Engineer: Izan Amador, Jorge L. Benavides
+--
+-- Create Date: 7.12.2022 15:13
+-- Design Name: detector_secuencia
 -- Module Name: detector_secuencia - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
+-- Project Name: detector_secuencia
+-- Target Devices: Zybo 
+-- Tool Versions: Vivado 2022.1
+-- Description: Debouncer for a button. 
 -- 
 -- Dependencies: 
 -- 
--- Revision:
--- Revision 0.01 - File Created
+-- Revision: 
+-- Revision 0.01 - Test Bench working
 -- Additional Comments:
--- 
+-- FSM Mealy Design
 ----------------------------------------------------------------------------------
-
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -44,76 +43,72 @@ begin
     case Estado_Actual is
 --------------------------------------------------
       when A =>
-        -- Ecuación de Transición de Estado A:
+        -- Ecuacion de Transicion de Estado A:
         if x = '1' then
           Proximo_Estado <= B;
-          -- Ecuación de salida A:
+          -- Ecuacion de salida A:
           y <= '0';
         else
           Proximo_Estado <= A;
           y <= '0';
         end if;
-
 --------------------------------------------------
       when B =>
-        -- Ecuación de Transición de Estado B:
+        -- Ecuacion de Transicion de Estado B:
         if x = '0' then
           Proximo_Estado <= C;
-          -- Ecuación de salida B:
+          -- Ecuacion de salida B:
           y <= '0';
         else
           Proximo_Estado <= A;
           y <= '0';
         end if;
-
 --------------------------------------------------
       when C =>
-        -- Ecuación de Transición de Estado C:
+        -- Ecuacion de Transicion de Estado C:
         if x = '1' then
           Proximo_Estado <= D;
-          -- Ecuación de salida C:
+          -- Ecuacion de salida C:
           y <= '0';
         else
           Proximo_Estado <= A;
-          -- Ecuación de salida C:
+          -- Ecuacion de salida C:
           y <= '0';
         end if;
-
 --------------------------------------------------
       when D =>
-        -- Ecuación de Transición de Estado:
+        -- Ecuacion de Transicion de Estado:
         if x = '0' then
           Proximo_Estado <= E;
-          -- Ecuación de salida:
+          -- Ecuacion de salida:
           y <= '0';
         else
           Proximo_Estado <= B;
-          -- Ecuación de salida:
+          -- Ecuacion de salida:
           y <= '0';
         end if;
-
 --------------------------------------------------
       when E =>
--- Ecuación de Transición de Estado:
+-- Ecuacion de Transicion de Estado:
         if x = '0' then
           Proximo_Estado <= F;
-          -- Ecuación de salida:
+          -- Ecuacion de salida:
           y <= '0';
         else
           Proximo_Estado <= B;
-          -- Ecuación de salida:
+          -- Ecuacion de salida:
           y <= '0';
         end if;
-
+--------------------------------------------------
       when F =>
-        -- Ecuación de Transición de Estado:
+        -- Ecuacion de Transicion de Estado:
         if x = '1' then
           Proximo_Estado <= B;
-          -- Ecuación de salida:
-          y <= '1';
+          -- Ecuacion de salida:
+          y <= '1'; -- La secuencia es correcta '101001'
         else
           Proximo_Estado <= A;
-          -- Ecuación de salida:
+          -- Ecuacion de salida:
           y <= '0';
         end if;
     end case;
