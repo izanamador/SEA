@@ -7,7 +7,8 @@ entity detector_secuencia is
   port(x      : in  std_logic_vector(k-1 downto 0);  -- k Entradas.
        y     : out std_logic_vector(p-1 downto 0);  -- p Salidas.
        reset : in  std_logic;
-       clk   : in  std_logic);
+       clk   : in  std_logic;
+       cke   : in std_logic);
 
   type Estado is (A, B, C, D, E);       -- m Estados.
 
@@ -83,12 +84,14 @@ begin
     end case;
   end process Combinacional;
 
-  Secuencial : process(clk, reset)
+  Secuencial : process(clk, reset, cke)
   begin
     if reset = '1' then
       Estado_Actual <= A;
     elsif rising_edge(clk) then
-      Estado_Actual <= Proximo_Estado;
+      if cke = '1' then
+        Estado_Actual <= Proximo_Estado;
+        end if;
     end if;
   end process Secuencial;
 

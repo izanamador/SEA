@@ -34,7 +34,8 @@ architecture Comportamiento of Test_Bench is
   port(x      : in  std_logic_vector(k-1 downto 0);  -- k Entradas.
        y     : out std_logic_vector(p-1 downto 0);  -- p Salidas.
        reset : in  std_logic;
-       clk   : in  std_logic);
+       clk   : in  std_logic;
+       cke : in std_logic);
   end Component detector_secuencia;
 
 
@@ -44,7 +45,7 @@ architecture Comportamiento of Test_Bench is
 
   signal x_interno : std_logic_vector(k-1 downto 0):= (others => 'U');
   signal y_interno : std_logic_vector(p-1 downto 0):= (others => 'U');
-  signal reset_interno : std_logic := 'U';
+  signal reset_interno, cke_interno : std_logic := 'U';
   signal clk_interno : std_logic := '0';
 
 
@@ -56,7 +57,8 @@ begin
       x => x_interno,
       y => y_interno,
       reset => reset_interno,
-      clk => clk_interno);
+      clk => clk_interno,
+      cke => cke_interno);
 
 -- Taken from The Student Guide to VHDL, Peter J.Asheden
   clock_gen : process (clk_interno) is
@@ -66,6 +68,8 @@ begin
                      '0' after 2*semiperiodo;
     end if;
   end process clock_gen;
+
+  cke_interno <= '1';
 
   reset : process
   begin
