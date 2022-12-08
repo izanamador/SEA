@@ -58,5 +58,6 @@ package body Mis_Tipos is  -- Aquí defino el cuerpo de los subprogramas.
     return Parcial;
 
   end Resuelve;
-
-end Mis_Tipos;
+  
+  end Mis_Tipos;
+  
