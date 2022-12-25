@@ -1,0 +1,5 @@
+1. Simulacion que rompe
+CAPTURA TCL
+2. Simulacion que va bien
+SOLO LA PRIMERA COMENTADA. 
+

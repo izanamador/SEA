@@ -4,4 +4,15 @@ Running: D:/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package xil_defaultlib.tipos_rom_mux
+Compiling package ieee.numeric_std
+Compiling architecture comportamiento of entity xil_defaultlib.MUX [\MUX(n_bits_dir=2)\]
+Compiling architecture comportamiento of entity xil_defaultlib.ROM [\ROM(n_bits_dir=2)\]
+Compiling architecture comportamiento of entity xil_defaultlib.test_bench_fichero
+Built simulation snapshot Test_Bench_Fichero_behav

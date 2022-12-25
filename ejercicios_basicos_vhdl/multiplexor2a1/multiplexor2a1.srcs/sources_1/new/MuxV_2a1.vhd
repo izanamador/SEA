@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------
--- Company: Universidad de Málaga
+-- Company: Universidad de Malaga
 -- Engineer: Izan Amador, Jorge L. Benavides
 --
 -- Create Date: 23.11.2022 17:47:41

@@ -4,4 +4,6 @@ Running: D:/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+ERROR: [XSIM 43-3249] File C:/Users/izana/Documents/GitHub/SEA/practica1/practica1.srcs/sim_1/new/Mi_Logica_TB.vhd, line 9. Unresolved signal "s_sr" is multiply driven.

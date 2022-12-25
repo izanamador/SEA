@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 30.11.2022 11:39:30
--- Design Name: 
--- Module Name: top - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
+-- Company: Universidad de Málaga
+-- Engineer: Izan Amador, Jorge L. Benavides
+--
+-- Create Date: 23.11.2022 17:47:41
+-- Design Name: Contador Ascendente
+-- Module Name: contador_ascendente - Behavioral
+-- Project Name: contador_ascendente
+-- Target Devices: Zybo 
+-- Tool Versions: Vivado 2022.1
+-- Description: basic upwards counter 
 -- 
 -- Dependencies: 
 -- 
--- Revision:
+-- Revision: 
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+-- Configured for verification with Analog Discovery Module
 ----------------------------------------------------------------------------------
 
 

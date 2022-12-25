@@ -14,7 +14,7 @@ begin
   Bus_End_Point_1 : process  -- Fuente 1 para la señal resuelta (genera un driver).
   begin
     --¡Esta línea no compilará!
- --   s_sr <= '0' after 5 ns, '1' after 10 ns, 'X' after 12 ns;
+   s_sr <= '0' after 5 ns, '1' after 10 ns, 'X' after 12 ns;
     s_r  <= '0' after 5 ns, '1' after 10 ns, 'X' after 20 ns;
     wait;
   end process Bus_End_Point_1;
@@ -22,7 +22,7 @@ begin
   Bus_End_Point_2 : process  --Fuente 2 para la señal resuelta (otro driver).
   begin
     -- ¡Esta línea no compilará!
-  --  s_sr <= '0' after 5 ns, '1' after 12 ns, 'X' after 15 ns;
+   s_sr <= '0' after 5 ns, '1' after 12 ns, 'X' after 15 ns;
     s_r  <= '0' after 5 ns, '1' after 12 ns, 'X' after 15 ns;
     wait;
   end process Bus_End_Point_2;

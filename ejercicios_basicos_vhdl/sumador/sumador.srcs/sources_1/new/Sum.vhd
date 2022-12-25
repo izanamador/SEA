@@ -1,22 +1,23 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company: Universidad de Málaga
+-- Engineer: Izan Amador, Jorge L. Benavides
 --
--- Create Date: 26.11.2022 16:14:50
--- Design Name:
--- Module Name: MuxV_2a1 - Behavioral
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
---
--- Dependencies:
---
--- Revision:
+-- Create Date: 23.11.2022 17:47:41
+-- Design Name: sumador
+-- Module Name: sumador - Behavioral
+-- Project Name: sumador
+-- Target Devices: Zybo 
+-- Tool Versions: Vivado 2022.1
+-- Description: basic adder block. 
+-- 
+-- Dependencies: 
+-- 
+-- Revision: 
 -- Revision 0.01 - File Created
 -- Additional Comments:
---
+-- Generic simple adder
 ----------------------------------------------------------------------------------
+
 
 library ieee;
 use ieee.std_logic_1164.all;

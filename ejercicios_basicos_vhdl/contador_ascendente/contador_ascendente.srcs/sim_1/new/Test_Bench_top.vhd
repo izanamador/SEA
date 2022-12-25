@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company: Universidad de Málaga
+-- Engineer: Izan Amador, Jorge L. Benavides
 --
--- Create Date: 19.10.2020 12:14:30
--- Design Name:
--- Module Name: Test_Bench - Comportamiento
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
---
--- Dependencies:
---
--- Revision:
+-- Create Date: 23.11.2022 17:47:41
+-- Design Name: Contador Ascendente
+-- Module Name: Test_Bench_top - Behavioral
+-- Project Name: contador_ascendente
+-- Target Devices: Zybo 
+-- Tool Versions: Vivado 2022.1
+-- Description: basic upwards counter
+-- 
+-- Dependencies: 
+-- 
+-- Revision: 
 -- Revision 0.01 - File Created
 -- Additional Comments:
---
+-- Configured for verification with Analog Discovery Module
 ----------------------------------------------------------------------------------
 
 

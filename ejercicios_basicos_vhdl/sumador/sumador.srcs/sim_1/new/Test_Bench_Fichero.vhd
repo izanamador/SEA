@@ -1,22 +1,23 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company: Universidad de Málaga
+-- Engineer: Izan Amador, Jorge L. Benavides
 --
--- Create Date: 19.10.2020 12:14:30
--- Design Name:
--- Module Name: Test_Bench - Comportamiento
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
---
--- Dependencies:
---
--- Revision:
+-- Create Date: 23.11.2022 17:47:41
+-- Design Name: sumador
+-- Module Name: Test_Bench_Fichero - Behavioral
+-- Project Name: sumador
+-- Target Devices: Zybo 
+-- Tool Versions: Vivado 2022.1
+-- Description: basic test bench for a simple adder. 
+-- 
+-- Dependencies: 
+-- 
+-- Revision: 
 -- Revision 0.01 - File Created
 -- Additional Comments:
---
+-- 
 ----------------------------------------------------------------------------------
+
 
 
 library IEEE;

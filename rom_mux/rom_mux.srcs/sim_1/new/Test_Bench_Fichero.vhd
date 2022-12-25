@@ -44,18 +44,18 @@ architecture Comportamiento of Test_Bench_Fichero is
 
 
   constant semiperiodo : time    := 10 ns;
-  constant N_Bits_Dir  : natural := 3;
-  constant n : integer := 3;
+  constant N_Bits_Dir  : natural := 2;
+  constant n : integer := 2;
 
   signal Direccion_interno : std_logic_vector (N_Bits_Dir - 1 downto 0) := (others => 'U');
   signal Dato_interno : std_logic_vector(N_Bits_Dato - 1 downto 0):= (others => 'U');
   signal Tabla_ROM_interno : Tabla(0 to 2**N_Bits_Dir-1) :=
     (('1','0','1','0','1','0','1','0'),
      b"1011_1011", -- si no se indica la "b" no sería correcto
-     x"CC",
-     x"DD",
-     x"EE",
-     x"FF",
+     --x"CC",
+     --x"DD",
+     --x"EE",
+    -- x"FF",
      (others => '0'),
      (0 | 4 => '1', others => '0'));
 
@@ -116,7 +116,7 @@ begin
       if Correcto then
 
         read(Input_Line, Input_Data);  -- El siguiente campo es el vector de pruebas.
-        Direccion_interno <= TO_STDLOGICVECTOR(Input_Data)(2 downto 0);
+        Direccion_interno <= TO_STDLOGICVECTOR(Input_Data)(1 downto 0);
         -- De forma simultánea lo volcaremos en consola en csv.
         write(Std_Out_Line, Delay, right, 5);  -- Longitud del retardo, ej. "20 ms".
         write(Std_Out_Line, Coma, right, 1);
