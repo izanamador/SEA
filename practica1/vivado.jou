@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Jan  3 13:10:44 2023
+# Process ID: 18776
+# Current directory: C:/Users/izana/Documents/GitHub/SEA/practica1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12432 C:\Users\izana\Documents\GitHub\SEA\practica1\practica1.xpr
+# Log file: C:/Users/izana/Documents/GitHub/SEA/practica1/vivado.log
+# Journal file: C:/Users/izana/Documents/GitHub/SEA/practica1\vivado.jou
+# Running On: LAPTOP-RJEQ6RUE, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 8458 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/izana/Documents/GitHub/SEA/practica1/practica1.xpr
+update_compile_order -fileset sources_1
