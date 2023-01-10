@@ -97,7 +97,7 @@ begin
   begin
     if reset = '1' then
       d_aux <= (others => '0');
-    elsif rising_edge( clk ) then
+    elsif rising_edge( clk ) and cke = '1' then
       if control = "000" then           -- Carga
         d_aux <= d;
       elsif control = "001" then        -- Cuenta ascendente
