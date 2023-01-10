@@ -3,35 +3,24 @@
 -- Engineer: Izan Amador, Jorge L. Benavides
 --
 -- Create Date: 23.11.2022 17:47:41
--- Design Name: sumador
--- Module Name: Test_Bench_Fichero - Behavioral
--- Project Name: sumador
--- Target Devices: Zybo 
+-- Design Name: Debouncer
+-- Module Name: Test_Bench - Behavioral
+-- Project Name: Sincronizador
+-- Target Devices: Zybo
 -- Tool Versions: Vivado 2022.1
--- Description: basic test bench for a simple adder. 
--- 
--- Dependencies: 
--- 
--- Revision: 
+-- Description: Debouncer for a button.
+--
+-- Dependencies:
+--
+-- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
 ----------------------------------------------------------------------------------
-
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use STD.textIO.ALL;                     -- Se va a hacer uso de ficheros.
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity Test_Bench is
 --  Port ( );
@@ -39,96 +28,97 @@ end Test_Bench;
 
 architecture Comportamiento of Test_Bench is
 
-  -- Registro universal a probar
-  component registro is
-    generic (
-      n: integer
-    );
-    port (
-      control: in std_logic_vector(2 downto 0);
-      D: in std_logic_vector(n-1 downto 0);
-      CLK: in std_logic;
-      CKE: in std_logic;
-      RESET: in std_logic;
-      Q: out std_logic_vector(n-1 downto 0)
-    );
-  end component;
-  
-  -- Par·metros y seÒales
-  constant n: integer := 8;
-  signal clk_sig: std_logic;  -- SeÒal de reloj
-  signal control_sig: std_logic_vector(2 downto 0);  -- SeÒal de control
-  signal d_sig: std_logic_vector(n-1 downto 0);  -- SeÒal de datos de entrada
-  signal cke_sig: std_logic;  -- SeÒal de enable de reloj
-  signal reset_sig: std_logic;  -- SeÒal de reset
-  signal q_sig: std_logic_vector(n-1 downto 0);  -- SeÒal de datos de salida
-  
+  component registro
+    generic (n : integer := 8);
+    port(d       : in  std_logic_vector(n-1 downto 0);
+         control : in  std_logic_vector (2 downto 0);
+         clk     : in  std_logic;
+         cke     : in  std_logic;
+         reset   : in  std_logic;
+         q       : out std_logic_vector(n-1 downto 0));
+  end Component registro;
+
+
+  constant semiperiodo    : time    := 10 ns;
+  constant tiempo_control : time    := 15 ns;
+  constant n              : integer := 3;
+
+
+  signal d_interno, q_interno       : std_logic_vector(n-1 downto 0) := (others => 'U');
+  signal control_interno            : std_logic_vector(2 downto 0)   := (others => 'U');
+  signal reset_interno, cke_interno : std_logic                      := 'U';
+  signal clk_interno                : std_logic                      := '0';
+
+
 begin
-  -- Instanciar el registro universal
-  uut: registro generic map(n=>n)
-    port map(control=>control_sig, D=>d_sig, CLK=>clk_sig, CKE=>cke_sig, RESET=>reset_sig, Q=>q_sig);
-  
-  -- Generador de reloj
-  clk_gen: process
+
+  DUT : registro
+    generic map (n)
+    port map(
+      d       => d_interno,
+      q       => q_interno,
+      control => control_interno,
+      reset   => reset_interno,
+      clk     => clk_interno,
+      cke     => cke_interno);
+
+-- Taken from The Student Guide to VHDL, Peter J.Asheden
+  clock_gen : process (clk_interno) is
   begin
-    clk_sig <= '0';
+    if clk_interno = '0' then
+      clk_interno <= '1' after semiperiodo,
+                     '0' after 2*semiperiodo;
+    end if;
+  end process clock_gen;
+
+  cke_interno <= '1';
+
+  reset : process
+  begin
+    reset_interno <= '0';
     wait for 5 ns;
-    clk_sig <= '1';
+    reset_interno <= '1';
     wait for 5 ns;
-  end process;
-  
- reset: process
-      begin
-      reset_sig <= '0';
-      wait for 5 ns;
-      reset_sig <= '1';
-      cke_sig <= '1';
-      wait for 5 ns;
-      reset_sig <= '0';
-      wait;
- end process;
-  
-  
-  -- Pruebas
---  tb: process
---  begin
---    -- Inicializar seÒales
---    control_sig <= "000";
---    d_sig <= (others => '0');
---    cke_sig <= '1';
---    reset_sig <= '0';
-    
---    -- Esperar algunas iteraciones de reloj
---    wait for 15 ns;
-    
---    -- Cargar dato en el registro
---    d_sig <= "10101010";
---    control_sig <= "000";
---    wait for 5 ns;
-    
---    -- Comprobar que el dato se ha cargado correctamente
---    assert q_sig = "10101010" report "Error: carga de dato incorrecta" severity error;
-    
---    -- Finalizar
---    wait;
---  end process;
+    reset_interno <= '0';
+    wait;
+  end process reset;
+
+  control : process
+  begin
+    control_interno <= "000";
+    wait for tiempo_control;
+    control_interno <= "001";
+    wait for tiempo_control;
+    control_interno <= "010";
+    wait for tiempo_control;
+    control_interno <= "011";
+    wait for tiempo_control;
+    control_interno <= "100";
+    wait for tiempo_control;
+    control_interno <= "101";
+    wait for tiempo_control;
+    control_interno <= "110";
+    wait for tiempo_control;
+    control_interno <= "111";
+    wait for tiempo_control;
+    wait;
+  end process control;
 
   Estimulos_Desde_Fichero : process
 
     file Input_File  : text;
     file Output_File : text;
 
-    variable Input_Data   : BIT_VECTOR(10 downto 0) := (OTHERS => '0');
-    variable Delay        : time                   := 0 ms;
-    variable Input_Line   : line                   := NULL;
-    variable Output_Line  : line                   := NULL;
-    variable Std_Out_Line : line                   := NULL;
-    variable Correcto     : Boolean                := True;
-    constant Coma         : character              := ',';
+    variable Input_Data   : BIT_VECTOR(n-1 downto 0) := (OTHERS => '0');
+    variable Delay        : time                     := 0 ms;
+    variable Input_Line   : line                     := NULL;
+    variable Output_Line  : line                     := NULL;
+    variable Std_Out_Line : line                     := NULL;
+    variable Correcto     : Boolean                  := True;
+    constant Coma         : character                := ',';
 
 
   begin
-
 -- sumador_Estimulos.txt contiene los est√≠mulos y los tiempos de retardo para el semisumador.
     file_open(Input_File, "C:\Users\izana\Documents\GitHub\SEA\Estimulos\practica2_Estimulos.txt", read_mode);
 
@@ -149,17 +139,13 @@ begin
 
       readline(Input_File, Input_Line);
 
-      read(Input_Line, Delay, Correcto);  -- Comprobaci√≥n de que se trata de un texto que representa
-      -- el retardo, si no es as√≠ leemos la siguiente l√≠nea.
+      read(Input_Line, Delay, Correcto);  -- ComprobaciÛn de que se trata de un texto que representa
+      -- el retardo, si no es asÌ leemos la siguiente lÌnea.
       if Correcto then
 
         read(Input_Line, Input_Data);  -- El siguiente campo es el vector de pruebas.
-        -- Der a Izq
-
-        control_sig <= TO_STDLOGICVECTOR(Input_Data)(10 downto 8);
-        d_sig <= TO_STDLOGICVECTOR(Input_Data)(7 downto 0);
-
-        -- De forma simult√°nea lo volcaremos en consola en csv.
+        d_interno <= TO_STDLOGICVECTOR(Input_Data);
+        -- De forma simult·nea lo volcaremos en consola en csv.
         write(Std_Out_Line, Delay, right, 5);  -- Longitud del retardo, ej. "20 ms".
         write(Std_Out_Line, Coma, right, 1);
         write(Std_Out_Line, Input_Data, right, 2);  --Longitud de los datos de entrada.
