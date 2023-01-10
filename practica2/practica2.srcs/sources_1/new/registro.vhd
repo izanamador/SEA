@@ -33,7 +33,6 @@ entity registro is
        reset: in std_logic;
        q: out std_logic_vector(n-1 downto 0));
   
-  type estado is (s_carga, s_cuenta_arriba, s_cuenta_abajo, s_desp_izq,   s_desp_der, s_guarda_dato);
 end entity;
 
 
