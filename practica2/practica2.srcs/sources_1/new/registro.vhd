@@ -41,38 +41,6 @@ end entity;
 architecture behavioral of registro is
   signal d_aux: std_logic_vector(n-1 downto 0):= (others => '0');
   signal number_1: std_logic_vector(n-1 downto 0) := (0 => '1', others => '0');
-  
-  function Bitwise_Add(numA, numB :std_logic_vector) return std_logic_vector is
-    variable sum: std_logic_vector(n-1 downto 0):= (others=> '0');
-    variable carry: std_logic_vector(n-1 downto 0):= (others=> '0');
-    variable internal_0: std_logic_vector(n-1 downto 0):= (others=> '0');
-  begin
-    if numB = internal_0  then
-      return numA;
-    else
-      sum := numA xor numB;
-      carry := (numA and numB);
-      carry(n-1 downto 1) := carry(n-2 downto 0);
-      carry(0) := '0';
-      return Bitwise_Add(sum,carry);
-    end if;
-  end function;
-
-  function Bitwise_Subs(numA, numB:std_logic_vector) return std_logic_vector is
-    variable subs: std_logic_vector(n-1 downto 0):= (others=> '0');
-    variable carry2: std_logic_vector(n-1 downto 0):= (others=> '0');
-    variable internal_0: std_logic_vector(n-1 downto 0):= (others=> '0');
-  begin
-    if numB = internal_0  then
-      return numA;
-    else
-      subs := numA xor numB;
-      carry2 := ((not numA) and numB);
-      carry2(n-1 downto 1) := carry2(n-2 downto 0);
-      carry2(0) := '0';
-      return Bitwise_Subs(subs,carry2);
-    end if;
-  end function;
 
   function my_Shift_left(numA: std_logic_vector) return std_logic_vector is
     variable result: std_logic_vector(n-1 downto 0):= (others=> '0');
@@ -90,6 +58,40 @@ architecture behavioral of registro is
     result(n-2 downto 0) := result(n-1 downto 1);
     result(n-1) := '0';
     return result;
+  end function;
+  
+  function Bitwise_Add(numA, numB :std_logic_vector) return std_logic_vector is
+    variable carry: std_logic_vector(n-1 downto 0):= (others=> '0');
+    variable internal_0: std_logic_vector(n-1 downto 0):= (others=> '0');
+    variable internal_numA: std_logic_vector(n-1 downto 0):= (others=> '0');
+    variable internal_numB: std_logic_vector(n-1 downto 0):= (others=> '0');
+    
+  begin
+    internal_numA := numA;
+    internal_numB := numB;
+    for i in n-1 downto 0 loop
+      carry := internal_numA and internal_numB;
+      internal_numA := internal_numA xor internal_numB;
+      internal_numB := my_Shift_left(carry);      
+    end loop;
+    return internal_numA;
+  end function;
+
+  function Bitwise_Subs(numA, numB:std_logic_vector) return std_logic_vector is
+    variable borrow: std_logic_vector(n-1 downto 0):= (others=> '0');
+    variable internal_0: std_logic_vector(n-1 downto 0):= (others=> '0');
+    variable internal_numA: std_logic_vector(n-1 downto 0):= (others=> '0');
+    variable internal_numB: std_logic_vector(n-1 downto 0):= (others=> '0');
+  begin
+    internal_numA := numA;
+    internal_numB := numB;
+    
+    for i in n-1 downto 0 loop
+      borrow := ((not internal_numA) and internal_numB);
+      internal_numA := internal_numA xor internal_numB;
+      internal_numB := my_Shift_left(borrow);
+    end loop;
+    return internal_numA;
   end function;
   
 begin
