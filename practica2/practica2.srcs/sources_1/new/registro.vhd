@@ -43,38 +43,8 @@ architecture behavioral of registro is
   signal Estado_Actual  : estado := s_carga;
   signal Proximo_Estado : estado;
   signal number_1: std_logic_vector(n-1 downto 0) := (0 => '1', others => '0');
+--  signal d_aux: std_logic_vector(n-1 downto 0) := (others => '0');
   
-  function Bitwise_Add(numA, numB :std_logic_vector) return std_logic_vector is
-    variable sum: std_logic_vector(n-1 downto 0):= (others=> '0');
-    variable carry: std_logic_vector(n-1 downto 0):= (others=> '0');
-    variable internal_0: std_logic_vector(n-1 downto 0):= (others=> '0');
-  begin
-    if numB = internal_0  then
-      return numA;
-    else
-      sum := numA xor numB;
-      carry := (numA and numB);
-      carry(n-1 downto 1) := carry(n-2 downto 0);
-      carry(0) := '0';
-      return Bitwise_Add(sum,carry);
-    end if;
-  end function;
-
-  function Bitwise_Subs(numA, numB:std_logic_vector) return std_logic_vector is
-        variable subs: std_logic_vector(n-1 downto 0):= (others=> '0');
-        variable carry2: std_logic_vector(n-1 downto 0):= (others=> '0');
-        variable internal_0: std_logic_vector(n-1 downto 0):= (others=> '0');
-  begin
-    if numB = internal_0  then
-      return numA;
-    else
-      subs := numA xor numB;
-      carry2 := ((not numA) and numB);
-      carry2(n-1 downto 1) := carry2(n-2 downto 0);
-      carry2(0) := '0';
-      return Bitwise_Subs(subs,carry2);
-    end if;
-  end function;
 
   function my_Shift_left(numA: std_logic_vector) return std_logic_vector is
     variable result: std_logic_vector(n-1 downto 0):= (others=> '0');
@@ -94,18 +64,69 @@ architecture behavioral of registro is
       return result;
   end function;
 
+ function Bitwise_Subs(numA, numB :std_logic_vector) return std_logic_vector is
+     variable borrow: std_logic_vector(n-1 downto 0):= (others=> '0');
+     variable internal_0: std_logic_vector(n-1 downto 0):= (others=> '0');
+     variable internal_numA: std_logic_vector(n-1 downto 0):= (others=> '0');
+     variable internal_numB: std_logic_vector(n-1 downto 0):= (others=> '0');
+     -- variable carry: std_logic_vector(n-1 downto 0):= (others=> '0');
+ 
+   begin
+     internal_numA := numA;
+     internal_numB := numB;
+     
+     while internal_numB /= internal_0 loop
+       borrow := ((not internal_numA) and internal_numB);
+       internal_numA := internal_numA xor internal_numB;
+       internal_numB := my_Shift_left(borrow);
+     end loop;
+     return internal_numA;
+   end function;
+ 
+--   function Bitwise_Add(dato: std_logic_vector) return std_logic_vector is
+--     variable carry: std_logic_vector(n-1 downto 0):= (others=> '0');
+--     variable cero: std_logic_vector(n-1 downto 0):= (others=> '0');
+--     variable dato_interno: std_logic_vector(n-1 downto 0):= (others=> '0');
+--     variable uno: std_logic_vector(n-1 downto 0):=(0 => '1', others=> '0');
+--     -- variable carry: std_logic_vector(n-1 downto 0):= (others=> '0');
+ 
+--   begin
+--     dato_interno := dato;  
+--     while uno /= cero loop
+--       carry := dato_interno and uno;
+--       dato_interno := dato_interno xor uno;
+--       uno := my_Shift_left(carry);
+--     end loop;
+     
+--     return dato_interno;    
+--   end function;
+  
+--  function Bitwise_Add(dato: std_logic_vector) return std_logic_vector is
+--    variable carry: std_logic := '0';
+--    variable result: std_logic_vector(n-1 downto 0):= (others=> '0');
+--begin
+--    for i in result'range loop
+--        result(i) := dato(i) xor carry xor result(i);
+--        carry := (dato(i) and carry) or (result(i) and carry) or (dato(i) and result(i));
+--    end loop;
+
+--    return result;
+--end function;
+
   
 begin
-  Combinacional: process(control,Estado_Actual)
-    variable d_aux: std_logic_vector(n-1 downto 0);
+  Combinacional: process(control,Estado_Actual,d)
+   variable d_aux: std_logic_vector(n-1 downto 0) := (others => '0');
+   
   begin
+  d_aux := d;
     case Estado_Actual is
 --------------------------------------------------
       when s_carga =>
 -- Ecuación de salida s_carga:
 -- Carga datos
-        d_aux := d;
-        q <= d;
+        ---d_aux <= d;
+        q <= d_aux;
 -- Ecuación de Transición de Estado s_carga:
         if control = "001" then
           Proximo_Estado <= s_cuenta_arriba;
@@ -117,8 +138,8 @@ begin
       when s_cuenta_arriba =>
 -- Ecuación de salida s_cuenta_arriba:
 -- Cuenta hacia arriba
-        d_aux := Bitwise_Add(d_aux,number_1);
-        q <= d_aux;
+       -- d_aux 
+--        q <= Bitwise_Add(d_aux);
 -- Ecuación de Transición de Estado s_carga:
         if control = "010" then
           Proximo_Estado <= s_cuenta_abajo;
@@ -129,8 +150,8 @@ begin
 --------------------------------------------------
       when s_cuenta_abajo =>
 -- Ecuación de salida s_carga:
-        d_aux := Bitwise_Subs(d_aux,number_1);
-        q <= d_aux;
+--        d_aux := Bitwise_Subs(d_aux,number_1);
+        q <= Bitwise_Subs(d_aux,number_1);
 -- Ecuación de Transición de Estado s_carga:
         if control = "011" then
           Proximo_Estado <= s_desp_izq;
