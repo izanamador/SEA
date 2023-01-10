@@ -58,7 +58,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zybo"/>
-    <Option Name="WTXSimLaunchSim" Val="21"/>
+    <Option Name="WTXSimLaunchSim" Val="24"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -89,15 +89,55 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/imports/new/Antirrebotes.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Antirrebotes.vhd"/>
+          <Attr Name="ImportTime" Val="1669200031"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/CKE_Gen.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/CKE_Gen.vhd"/>
+          <Attr Name="ImportTime" Val="1669201527"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/Reg_Des.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Reg_Des.vhd"/>
+          <Attr Name="ImportTime" Val="1669201460"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/Sincronizador.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ejercicios_basicos_vhdl/contador_ascendente/contador_ascendente.srcs/sources_1/imports/new/Sincronizador.vhd"/>
+          <Attr Name="ImportTime" Val="1669213675"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/registro.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/top.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="registro"/>
+        <Option Name="TopModule" Val="Sincronizador"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>

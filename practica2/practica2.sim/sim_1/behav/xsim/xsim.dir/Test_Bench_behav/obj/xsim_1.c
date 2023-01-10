@@ -54,23 +54,25 @@
 #endif
 typedef void (*funcp)(char *, char *);
 extern int main(int, char**);
-IKI_DLLESPEC extern void execute_20(char*, char *);
-IKI_DLLESPEC extern void execute_21(char*, char *);
-IKI_DLLESPEC extern void execute_22(char*, char *);
-IKI_DLLESPEC extern void execute_18(char*, char *);
-IKI_DLLESPEC extern void execute_19(char*, char *);
-IKI_DLLESPEC extern void transaction_0(char*, char*, unsigned, unsigned, unsigned);
+IKI_DLLESPEC extern void execute_27(char*, char *);
+IKI_DLLESPEC extern void execute_28(char*, char *);
+IKI_DLLESPEC extern void execute_29(char*, char *);
+IKI_DLLESPEC extern void execute_30(char*, char *);
+IKI_DLLESPEC extern void execute_31(char*, char *);
+IKI_DLLESPEC extern void execute_25(char*, char *);
+IKI_DLLESPEC extern void execute_26(char*, char *);
 IKI_DLLESPEC extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-funcp funcTab[7] = {(funcp)execute_20, (funcp)execute_21, (funcp)execute_22, (funcp)execute_18, (funcp)execute_19, (funcp)transaction_0, (funcp)vhdl_transfunc_eventcallback};
-const int NumRelocateId= 7;
+IKI_DLLESPEC extern void transaction_5(char*, char*, unsigned, unsigned, unsigned);
+funcp funcTab[9] = {(funcp)execute_27, (funcp)execute_28, (funcp)execute_29, (funcp)execute_30, (funcp)execute_31, (funcp)execute_25, (funcp)execute_26, (funcp)vhdl_transfunc_eventcallback, (funcp)transaction_5};
+const int NumRelocateId= 9;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/Test_Bench_behav/xsim.reloc",  (void **)funcTab, 7);
-	iki_vhdl_file_variable_register(dp + 3632);
-	iki_vhdl_file_variable_register(dp + 3688);
-	iki_vhdl_file_variable_register(dp + 5312);
-	iki_vhdl_file_variable_register(dp + 5352);
+	iki_relocate(dp, "xsim.dir/Test_Bench_behav/xsim.reloc",  (void **)funcTab, 9);
+	iki_vhdl_file_variable_register(dp + 3592);
+	iki_vhdl_file_variable_register(dp + 3648);
+	iki_vhdl_file_variable_register(dp + 5288);
+	iki_vhdl_file_variable_register(dp + 5328);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */

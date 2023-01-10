@@ -40,7 +40,7 @@ architecture Comportamiento of Test_Bench is
 
 
   constant semiperiodo    : time    := 10 ns;
-  constant tiempo_control : time    := 15 ns;
+  constant tiempo_control : time    := 50 ns;
   constant n              : integer := 3;
 
 
@@ -94,7 +94,7 @@ begin
     control_interno <= "011";
     wait for tiempo_control;
     control_interno <= "100";
-    wait for tiempo_control;
+    wait for tiempo_control - 20 ns;
     control_interno <= "101";
     wait for tiempo_control;
     control_interno <= "110";

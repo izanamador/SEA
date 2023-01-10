@@ -10,6 +10,6 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.registro [registro_default]
+Compiling architecture behavioral of entity xil_defaultlib.registro [\registro(n=3)\]
 Compiling architecture comportamiento of entity xil_defaultlib.test_bench
 Built simulation snapshot Test_Bench_behav

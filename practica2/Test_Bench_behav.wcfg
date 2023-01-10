@@ -11,47 +11,49 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="4,003.328 ns"></ZoomEndTime>
-      <Cursor1Time time="263.646 ns"></Cursor1Time>
+      <ZoomEndTime time="316.201 ns"></ZoomEndTime>
+      <Cursor1Time time="295.200 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="230"></NameColumnWidth>
+      <NameColumnWidth column_width="215"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
-   <wvobject fp_name="/Test_Bench/uut/CLK" type="logic">
-      <obj_property name="ElementShortName">CLK</obj_property>
-      <obj_property name="ObjectShortName">CLK</obj_property>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/Test_Bench/DUT/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/Test_Bench/uut/CKE" type="logic">
-      <obj_property name="ElementShortName">CKE</obj_property>
-      <obj_property name="ObjectShortName">CKE</obj_property>
+   <wvobject fp_name="/Test_Bench/DUT/cke" type="logic">
+      <obj_property name="ElementShortName">cke</obj_property>
+      <obj_property name="ObjectShortName">cke</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/Test_Bench/uut/RESET" type="logic">
-      <obj_property name="ElementShortName">RESET</obj_property>
-      <obj_property name="ObjectShortName">RESET</obj_property>
+   <wvobject fp_name="/Test_Bench/DUT/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/Test_Bench/uut/Control" type="array">
-      <obj_property name="ElementShortName">Control[2:0]</obj_property>
-      <obj_property name="ObjectShortName">Control[2:0]</obj_property>
+   <wvobject fp_name="/Test_Bench/DUT/d" type="array">
+      <obj_property name="ElementShortName">d[2:0]</obj_property>
+      <obj_property name="ObjectShortName">d[2:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench/DUT/control" type="array">
+      <obj_property name="ElementShortName">control[2:0]</obj_property>
+      <obj_property name="ObjectShortName">control[2:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_Bench/DUT/q" type="array">
+      <obj_property name="ElementShortName">q[2:0]</obj_property>
+      <obj_property name="ObjectShortName">q[2:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/uut/D" type="array">
-      <obj_property name="ElementShortName">D[7:0]</obj_property>
-      <obj_property name="ObjectShortName">D[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/uut/Q" type="array">
-      <obj_property name="ElementShortName">Q[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/uut/r" type="array">
-      <obj_property name="ElementShortName">r[7:0]</obj_property>
-      <obj_property name="ObjectShortName">r[7:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Test_Bench/uut/state" type="other">
-      <obj_property name="ElementShortName">state</obj_property>
-      <obj_property name="ObjectShortName">state</obj_property>
    </wvobject>
 </wave_config>
