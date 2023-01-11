@@ -1,29 +1,25 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 04.01.2023 20:56:31
--- Design Name: 
--- Module Name: registro - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
+-- Company: Universidad de Málaga
+-- Engineer: Izan Amador, Jorge L. Benavides
+--
+-- Create Date: 11.1.2022 
+-- Design Name: registro
+-- Module Name: registro
+-- Project Name: practica2
+-- Target Devices: Zybo 
+-- Tool Versions: Vivado 2022.1
+-- Description: Universal register with several operations without numeric library.
 -- 
 -- Dependencies: 
 -- 
--- Revision:
+-- Revision: 
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+-- Sincronizers implemented in buttons
 ----------------------------------------------------------------------------------
-
-
 library ieee;
 use ieee.std_logic_1164.all;
 
--- registro universal de n bits genérico y esquema fsm
--- entidad del registro universal
 entity registro is
   generic (n: integer := 8);
   port(d: in std_logic_vector(n-1 downto 0);
@@ -35,12 +31,10 @@ entity registro is
   
 end entity;
 
-
--- arquitectura del registro universal
 architecture behavioral of registro is
   signal d_aux: std_logic_vector(n-1 downto 0):= (others => '0');
   signal number_1: std_logic_vector(n-1 downto 0) := (0 => '1', others => '0');
-
+--------------------------FUNCIONES-------------------------------------------------
   function my_Shift_left(numA: std_logic_vector) return std_logic_vector is
     variable result: std_logic_vector(n-1 downto 0):= (others=> '0');
   begin
@@ -49,7 +43,7 @@ architecture behavioral of registro is
     result(0) := '0';
     return result;
   end function;
-
+  
   function my_Shift_right(numA: std_logic_vector) return std_logic_vector is
     variable result: std_logic_vector(n-1 downto 0):= (others=> '0');
   begin
@@ -92,7 +86,7 @@ architecture behavioral of registro is
     end loop;
     return internal_numA;
   end function;
-  
+--------------------------------------------------------------------------------
 begin
   Secuencial: process (clk, reset, control)
   begin

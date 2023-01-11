@@ -1,23 +1,22 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 10.01.2023 23:09:34
--- Design Name: 
--- Module Name: top - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
+-- Company: Universidad de Málaga
+-- Engineer: Izan Amador, Jorge L. Benavides
+--
+-- Create Date: 11.1.2022 
+-- Design Name: top
+-- Module Name: top
+-- Project Name: practica2
+-- Target Devices: Zybo 
+-- Tool Versions: Vivado 2022.1
+-- Description: Universal register with several operations without numeric library.
 -- 
 -- Dependencies: 
 -- 
--- Revision:
+-- Revision: 
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+-- Sincronizers implemented in buttons
 ----------------------------------------------------------------------------------
-
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -35,7 +34,7 @@ end top;
 
 architecture Behavioral of top is
   component Sincronizador
-    generic (m : integer := 1);         -- tamano del filtro
+    generic (m : integer := 1);  -- tamano del filtro
     Port(
       I     : in  std_logic;
       CKE   : out std_logic;
@@ -55,7 +54,6 @@ architecture Behavioral of top is
   
   signal reset_interno : std_logic := 'U';
   signal ce_interno    : std_logic := 'U';
- -- signal sw_interno    : std_logic_vector(2 downto 0) := (others => 'U');
   
 begin
   Sincronizador_reset : Sincronizador generic map(filter_size)
@@ -74,34 +72,9 @@ begin
       clk   => clk
       );
   
---  Sincronizador_sw0 : Sincronizador generic map(filter_size)
---    port map(
---      I     => sw(0),
---      CKE   => sw_interno(0),
---      reset => '0',
---      clk   => clk
---      );
-  
---  Sincronizador_sw1 : Sincronizador generic map(filter_size)
---    port map(
---      I     => sw(1),
---      CKE   => sw_interno(1),
---      reset => '0',
---      clk   => clk
---      );
-  
---  Sincronizador_sw2 : Sincronizador generic map(filter_size)
---    port map(
---      I     => sw(2),
---      CKE   => sw_interno(2),
---      reset => '0',
---      clk   => clk
---      );
-
   FSM : registro generic map(n)
     port map(
       d => jc_in,
-     -- control => sw_interno,
       control => sw,
       clk => clk,
       cke => ce_interno,
