@@ -21,6 +21,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use STD.textIO.ALL;                     -- Se va a hacer uso de ficheros.
+use work.Tipos_FSM_PLC.all;
 
 entity Test_Bench is
 end Test_Bench;
@@ -54,20 +55,45 @@ architecture Comportamiento of Test_Bench is
   
 
 
-  signal x_interno, y_interno : std_logic_vector(k_interno -1 downto 0) := (others => 'U');
+  signal x_interno: std_logic_vector(k_interno -1 downto 0) := (others => 'U');
+  signal y_interno : std_logic_vector(p_interno -1 downto 0) := (others => 'U');
   signal Tabla_De_Estado_interno : Tabla_FSM(0 to 2**m_interno-1) :=
     ((4 => '1', others => '0'), -- 0
      (5 => '1', others => '0'), -- 1
      (5 => '1', 0|1 => '1', others => '0'), -- 2
-     (6 => '1', others => '0'), -- 4
-     (5 => '1', others => '0') -- 5
+     (6 => '1', others => '0'), -- 3
+     (5 => '1', others => '0'), -- 4
+     -------------------------------------------------
+     (others => '0'), -- 5
+     (others => '0'), -- 6
+     (others => '0'), -- 7
+     (others => '0'), -- 8
+     (others => '0'), -- 9
+     (others => '0'), -- 10
+     (others => '0'), -- 11
+     (others => '0'), -- 12
+     (others => '0'), -- 13
+     (others => '0'), -- 14
+     (others => '0') -- 15
 );
   signal Tabla_De_Salida_interno : Tabla_FSM(0 to 2**m_interno-1) :=
     ((others => '0'), -- 0
      (others => '0'), -- 0
      (others => '0'), -- 0
      (others => '0'), -- 0
-     (0 => '1', others => '0') -- 1
+     (0 => '1', others => '0'), -- 1
+          -------------------------------------------------
+     (others => '0'), -- 5
+     (others => '0'), -- 6
+     (others => '0'), -- 7
+     (others => '0'), -- 8
+     (others => '0'), -- 9
+     (others => '0'), -- 10
+     (others => '0'), -- 11
+     (others => '0'), -- 12
+     (others => '0'), -- 13
+     (others => '0'), -- 14
+     (others => '0') -- 15
      );
   signal reset_interno, cke_interno, Trigger_interno : std_logic := 'U';
   signal clk_interno : std_logic := '0';

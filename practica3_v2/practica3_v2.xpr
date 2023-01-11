@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="60" Path="C:/Users/izana/Documents/GitHub/SEA/practica3/practica3.xpr">
+<Project Version="7" Minor="60" Path="C:/Users/izana/Documents/GitHub/SEA/practica3_v2/practica3_v2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="7ef93715389248b2beb9c75a814da15b"/>
+    <Option Name="Id" Val="0fcfc17681b34ab49771fa413aadd42d"/>
     <Option Name="Part" Val="xc7z010clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -58,7 +58,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zybo"/>
-    <Option Name="WTXSimLaunchSim" Val="4"/>
+    <Option Name="WTXSimLaunchSim" Val="0"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -89,66 +89,66 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/plc/CKE_Gen.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/plc_fixed/CKE_Gen.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc/CKE_Gen.vhd"/>
-          <Attr Name="ImportTime" Val="1673426901"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc_fixed/CKE_Gen.vhd"/>
+          <Attr Name="ImportTime" Val="1673437943"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/plc/Debouncer.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/plc_fixed/Debouncer.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc/Debouncer.vhd"/>
-          <Attr Name="ImportTime" Val="1673426901"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc_fixed/Debouncer.vhd"/>
+          <Attr Name="ImportTime" Val="1673437943"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/plc/Mis_Tipos_PLC.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/plc_fixed/Mis_Tipos_PLC.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc/Mis_Tipos_PLC.vhd"/>
-          <Attr Name="ImportTime" Val="1673426901"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc_fixed/Mis_Tipos_PLC.vhd"/>
+          <Attr Name="ImportTime" Val="1673437943"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/plc/MUX_PLC.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/plc_fixed/MUX_PLC.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc/MUX_PLC.vhd"/>
-          <Attr Name="ImportTime" Val="1673426901"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc_fixed/MUX_PLC.vhd"/>
+          <Attr Name="ImportTime" Val="1673437943"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/plc/Reg_Des.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/plc_fixed/Reg_Des.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc/Reg_Des.vhd"/>
-          <Attr Name="ImportTime" Val="1673426901"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc_fixed/Reg_Des.vhd"/>
+          <Attr Name="ImportTime" Val="1673437943"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/plc/Reg_PLC.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/plc_fixed/Reg_PLC.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc/Reg_PLC.vhd"/>
-          <Attr Name="ImportTime" Val="1673426901"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc_fixed/Reg_PLC.vhd"/>
+          <Attr Name="ImportTime" Val="1673437943"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/plc/Sincronizador.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/plc_fixed/Sincronizador.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc/Sincronizador.vhd"/>
-          <Attr Name="ImportTime" Val="1673426901"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc_fixed/Sincronizador.vhd"/>
+          <Attr Name="ImportTime" Val="1673437943"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/plc/FSM_PLC.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/plc_fixed/FSM_PLC.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc/FSM_PLC.vhd"/>
-          <Attr Name="ImportTime" Val="1673426901"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/plc_fixed/FSM_PLC.vhd"/>
+          <Attr Name="ImportTime" Val="1673437943"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -161,29 +161,15 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/imports/Templates/ZYBO_MASTER.xdc">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Templates/ZYBO_MASTER.xdc"/>
-          <Attr Name="ImportTime" Val="1669217409"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/new/Test_Bench.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="Test_Bench"/>
+        <Option Name="TopModule" Val="FSM_PLC"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>

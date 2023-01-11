@@ -38,7 +38,7 @@ entity Debouncer is
               reset : in STD_LOGIC;
               clk   : in STD_LOGIC );
 end Debouncer;
- 
+
 architecture Simple of Debouncer is
 
 signal   s         : STD_LOGIC_VECTOR(3 downto 0);
