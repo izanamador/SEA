@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Jan 11 15:58:29 2023
+# Process ID: 25276
+# Current directory: C:/Users/izana/Documents/GitHub/SEA/practica2/practica2.runs/impl_1
+# Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: C:/Users/izana/Documents/GitHub/SEA/practica2/practica2.runs/impl_1/top.vdi
+# Journal file: C:/Users/izana/Documents/GitHub/SEA/practica2/practica2.runs/impl_1\vivado.jou
+# Running On: LAPTOP-RJEQ6RUE, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 8458 MB
+#-----------------------------------------------------------
+source top.tcl -notrace

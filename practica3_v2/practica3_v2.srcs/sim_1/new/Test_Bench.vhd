@@ -57,44 +57,92 @@ architecture Comportamiento of Test_Bench is
 
   signal x_interno: std_logic_vector(k_interno -1 downto 0) := (others => 'U');
   signal y_interno : std_logic_vector(p_interno -1 downto 0) := (others => 'U');
-  signal Tabla_De_Estado_interno : Tabla_FSM(0 to 2**m_interno-1) :=
-    ((4 => '1', others => '0'), -- 0
-     (5 => '1', others => '0'), -- 1
-     (5 => '1', 0|1 => '1', others => '0'), -- 2
-     (6 => '1', others => '0'), -- 3
-     (5 => '1', others => '0'), -- 4
-     -------------------------------------------------
-     (others => '0'), -- 5
-     (others => '0'), -- 6
-     (others => '0'), -- 7
-     (others => '0'), -- 8
-     (others => '0'), -- 9
-     (others => '0'), -- 10
-     (others => '0'), -- 11
-     (others => '0'), -- 12
-     (others => '0'), -- 13
-     (others => '0'), -- 14
-     (others => '0') -- 15
-);
-  signal Tabla_De_Salida_interno : Tabla_FSM(0 to 2**m_interno-1) :=
-    ((others => '0'), -- 0
-     (others => '0'), -- 0
-     (others => '0'), -- 0
-     (others => '0'), -- 0
-     (0 => '1', others => '0'), -- 1
+  
+  -----------------------------------
+  -- MOORE
+  -----------------------------------
+  
+--  signal Tabla_De_Estado_interno : Tabla_FSM(0 to 2**m_interno-1) :=
+--    ((4 => '1', others => '0'), -- 0
+--     (5 => '1', others => '0'), -- 1
+--     (5 => '1', 0|1 => '1', others => '0'), -- 2
+--     (6 => '1', others => '0'), -- 3
+--     (5 => '1', others => '0'), -- 4
+--     -------------------------------------------------
+--     (others => '0'), -- 5
+--     (others => '0'), -- 6
+--     (others => '0'), -- 7
+--     (others => '0'), -- 8
+--     (others => '0'), -- 9
+--     (others => '0'), -- 10
+--     (others => '0'), -- 11
+--     (others => '0'), -- 12
+--     (others => '0'), -- 13
+--     (others => '0'), -- 14
+--     (others => '0') -- 15
+--);
+--  signal Tabla_De_Salida_interno : Tabla_FSM(0 to 2**m_interno-1) :=
+--    ((others => '0'), -- 0
+--     (others => '0'), -- 0
+--     (others => '0'), -- 0
+--     (others => '0'), -- 0
+--     (0 => '1', others => '0'), -- 1
+--          -------------------------------------------------
+--     (others => '0'), -- 5
+--     (others => '0'), -- 6
+--     (others => '0'), -- 7
+--     (others => '0'), -- 8
+--     (others => '0'), -- 9
+--     (others => '0'), -- 10
+--     (others => '0'), -- 11
+--     (others => '0'), -- 12
+--     (others => '0'), -- 13
+--     (others => '0'), -- 14
+--     (others => '0') -- 15
+--     );
+     
+     -----------------------------------
+       -- MEALY
+       -----------------------------------
+       
+       signal Tabla_De_Estado_interno : Tabla_FSM(0 to 2**m_interno-1) :=
+         ((4 => '1', others => '0'), -- 0
+          (4 => '1',1 => '1', others => '0'), -- 1
+          (4|5 => '1', others => '0'), -- 2
+          (4 => '1', 2 => '1', others => '0'), -- 3
+          (4 => '1',2 => '1',0 => '1', others => '0'), -- 4
+          (4 => '1', others => '0'),
           -------------------------------------------------
-     (others => '0'), -- 5
-     (others => '0'), -- 6
-     (others => '0'), -- 7
-     (others => '0'), -- 8
-     (others => '0'), -- 9
-     (others => '0'), -- 10
-     (others => '0'), -- 11
-     (others => '0'), -- 12
-     (others => '0'), -- 13
-     (others => '0'), -- 14
-     (others => '0') -- 15
+          (others => '0'), -- 5
+          (others => '0'), -- 6
+          (others => '0'), -- 7
+          (others => '0'), -- 8
+          (others => '0'), -- 9
+          (others => '0'), -- 10
+          (others => '0'), -- 11
+          (others => '0'), -- 12
+          (others => '0'), -- 13
+          (others => '0') -- 14
      );
+       signal Tabla_De_Salida_interno : Tabla_FSM(0 to 2**m_interno-1) :=
+         ((others => '0'), -- 0
+          (others => '0'), -- 0
+          (others => '0'), -- 0
+          (others => '0'), -- 0
+          (others => '0'), -- 0
+          (0 => '1', others => '0'), -- 1
+               -------------------------------------------------
+          (others => '0'), -- 5
+          (others => '0'), -- 6
+          (others => '0'), -- 7
+          (others => '0'), -- 8
+          (others => '0'), -- 9
+          (others => '0'), -- 10
+          (others => '0'), -- 11
+          (others => '0'), -- 12
+          (others => '0'), -- 13
+          (others => '0') -- 14
+          );
   signal reset_interno, cke_interno, Trigger_interno : std_logic := 'U';
   signal clk_interno : std_logic := '0';
 
@@ -149,6 +197,7 @@ begin
     wait for 5 ns;
     trigger_interno <= '1';
     -- wait for 100 ns;
+
     wait;
   end process trigger;
 
@@ -178,10 +227,12 @@ begin
 
    begin
 -- sumador_Estimulos.txt contiene los estímulos y los tiempos de retardo para el semisumador.
-    file_open(Input_File, "C:\Users\izana\Documents\GitHub\SEA\Estimulos\practica3_Estimulos.txt", read_mode);
+    file_open(Input_File, "C:\Users\izana\Documents\GitHub\SEA\Estimulos\practica3_mealy_Estimulos.txt", read_mode);
+    --file_open(Input_File, "C:\Users\izana\Documents\GitHub\SEA\Estimulos\practica3_Estimulos.txt", read_mode);
 
 -- sumador_Estimulos.csv contiene los estímulos y los tiempos de retardo para el Analog Discovery 2.
-    file_open(Output_File, "C:\Users\izana\Documents\GitHub\SEA\CSV\practica3.csv", write_mode);
+    file_open(Output_File, "C:\Users\izana\Documents\GitHub\SEA\CSV\practica3_mealy.csv", write_mode);
+   -- file_open(Output_File, "C:\Users\izana\Documents\GitHub\SEA\CSV\practica3.csv", write_mode);
 
 -- Titles: Son para el formato EXCEL *.CSV (Comma Separated Values):
     write(Std_Out_Line, string'("Retardo"), right, 7);

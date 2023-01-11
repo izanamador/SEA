@@ -55,7 +55,7 @@ architecture Behavioral of top is
   
   signal reset_interno : std_logic := 'U';
   signal ce_interno    : std_logic := 'U';
-  signal sw_interno    : std_logic_vector(2 downto 0) := (others => 'U');
+ -- signal sw_interno    : std_logic_vector(2 downto 0) := (others => 'U');
   
 begin
   Sincronizador_reset : Sincronizador generic map(filter_size)
@@ -74,34 +74,35 @@ begin
       clk   => clk
       );
   
-  Sincronizador_sw0 : Sincronizador generic map(filter_size)
-    port map(
-      I     => sw(0),
-      CKE   => sw_interno(0),
-      reset => '0',
-      clk   => clk
-      );
+--  Sincronizador_sw0 : Sincronizador generic map(filter_size)
+--    port map(
+--      I     => sw(0),
+--      CKE   => sw_interno(0),
+--      reset => '0',
+--      clk   => clk
+--      );
   
-  Sincronizador_sw1 : Sincronizador generic map(filter_size)
-    port map(
-      I     => sw(1),
-      CKE   => sw_interno(1),
-      reset => '0',
-      clk   => clk
-      );
+--  Sincronizador_sw1 : Sincronizador generic map(filter_size)
+--    port map(
+--      I     => sw(1),
+--      CKE   => sw_interno(1),
+--      reset => '0',
+--      clk   => clk
+--      );
   
-  Sincronizador_sw2 : Sincronizador generic map(filter_size)
-    port map(
-      I     => sw(2),
-      CKE   => sw_interno(2),
-      reset => '0',
-      clk   => clk
-      );
+--  Sincronizador_sw2 : Sincronizador generic map(filter_size)
+--    port map(
+--      I     => sw(2),
+--      CKE   => sw_interno(2),
+--      reset => '0',
+--      clk   => clk
+--      );
 
   FSM : registro generic map(n)
     port map(
       d => jc_in,
-      control => sw_interno,
+     -- control => sw_interno,
+      control => sw,
       clk => clk,
       cke => ce_interno,
       reset => reset_interno,

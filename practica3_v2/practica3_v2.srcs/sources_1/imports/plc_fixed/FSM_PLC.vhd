@@ -170,13 +170,13 @@ Asignacion_Proximo_Estado: Proximo_Estado <= Salida_MUX( m - 1 downto 0 );  -- a
 --
 -- Ecuación de salida estilo Moore:
 -- Descomentar en caso de Moore comentar en caso de Mealy:
---                                                                                                                     
+                                                                                                                     
 --Ecuacion_De_Salida_Moore: MUX_PLC generic map( m, T_DM ) -- Selecciona a partir del estado actual la salida.
 --                                  Port    map( Direccion => Estado_Actual,
 --                                               Dato      => Salida,
 --                                               Tabla_ROM => Tabla_De_Salida);    
 --Salida_De_Moore: y <= Salida( p - 1 downto 0 );
---
+
 --Fin de Descomentar en caso de Moore comentar en caso de Mealy
 --
                        
@@ -202,7 +202,7 @@ Ecuacion_De_Salida_2_Mealy: MUX_PLC generic map( k, T_DM ) -- Selecciona a parti
                                                Dato      => Salida,
                                                Tabla_ROM => Salidas_Con_Formato);
 Salida_De_Mealy: y <= Salida( p - 1 downto 0 );                       
---
+
 --Fin de Descomentar en caso de Mealy comentar en caso de Moore
 --
                                                                       
