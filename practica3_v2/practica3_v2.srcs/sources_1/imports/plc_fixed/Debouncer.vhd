@@ -41,7 +41,7 @@ end Debouncer;
 
 architecture Simple of Debouncer is
 
-signal   s         : STD_LOGIC_VECTOR(3 downto 0);
+signal   s         : STD_LOGIC_VECTOR(n-1 downto 0);
 signal   Resultado : STD_LOGIC; -- Contiene la AND de todos los bits de s.
 component Reg_Des is
     generic( n     : integer);

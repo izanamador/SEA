@@ -1,0 +1,17 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/izana/Documents/GitHub/SEA/practica3_v2/practica3_v2.srcs/sources_1/imports/plc_fixed/CKE_Gen.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CKE_Gen'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/izana/Documents/GitHub/SEA/practica3_v2/practica3_v2.srcs/sources_1/imports/plc_fixed/Debouncer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Debouncer'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/izana/Documents/GitHub/SEA/practica3_v2/practica3_v2.srcs/sources_1/imports/plc_fixed/Mis_Tipos_PLC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/izana/Documents/GitHub/SEA/practica3_v2/practica3_v2.srcs/sources_1/imports/plc_fixed/FSM_PLC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FSM_PLC'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/izana/Documents/GitHub/SEA/practica3_v2/practica3_v2.srcs/sources_1/imports/plc_fixed/MUX_PLC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MUX_PLC'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/izana/Documents/GitHub/SEA/practica3_v2/practica3_v2.srcs/sources_1/imports/plc_fixed/Reg_Des.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Reg_Des'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/izana/Documents/GitHub/SEA/practica3_v2/practica3_v2.srcs/sources_1/imports/plc_fixed/Reg_PLC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Reg_PLC'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/izana/Documents/GitHub/SEA/practica3_v2/practica3_v2.srcs/sources_1/imports/plc_fixed/Sincronizador.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Sincronizador'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/izana/Documents/GitHub/SEA/practica3_v2/practica3_v2.srcs/sim_1/new/Test_Bench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Test_Bench'

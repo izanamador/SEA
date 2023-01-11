@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../practica3_v2.srcs/sources_1/imports/plc_fixed/CKE_Gen.vhd" \
+"../../../../practica3_v2.srcs/sources_1/imports/plc_fixed/Debouncer.vhd" \
+"../../../../practica3_v2.srcs/sources_1/imports/plc_fixed/Mis_Tipos_PLC.vhd" \
+"../../../../practica3_v2.srcs/sources_1/imports/plc_fixed/FSM_PLC.vhd" \
+"../../../../practica3_v2.srcs/sources_1/imports/plc_fixed/MUX_PLC.vhd" \
+"../../../../practica3_v2.srcs/sources_1/imports/plc_fixed/Reg_Des.vhd" \
+"../../../../practica3_v2.srcs/sources_1/imports/plc_fixed/Reg_PLC.vhd" \
+"../../../../practica3_v2.srcs/sources_1/imports/plc_fixed/Sincronizador.vhd" \
+"../../../../practica3_v2.srcs/sim_1/new/Test_Bench.vhd" \
+
+# Do not sort compile order
+nosort
