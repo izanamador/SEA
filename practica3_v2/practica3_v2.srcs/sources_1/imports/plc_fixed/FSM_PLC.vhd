@@ -171,11 +171,11 @@ Asignacion_Proximo_Estado: Proximo_Estado <= Salida_MUX( m - 1 downto 0 );  -- a
 -- Ecuación de salida estilo Moore:
 -- Descomentar en caso de Moore comentar en caso de Mealy:
                                                                                                                      
---Ecuacion_De_Salida_Moore: MUX_PLC generic map( m, T_DM ) -- Selecciona a partir del estado actual la salida.
---                                  Port    map( Direccion => Estado_Actual,
---                                               Dato      => Salida,
---                                               Tabla_ROM => Tabla_De_Salida);    
---Salida_De_Moore: y <= Salida( p - 1 downto 0 );
+Ecuacion_De_Salida_Moore: MUX_PLC generic map( m, T_DM ) -- Selecciona a partir del estado actual la salida.
+                                  Port    map( Direccion => Estado_Actual,
+                                               Dato      => Salida,
+                                               Tabla_ROM => Tabla_De_Salida);    
+Salida_De_Moore: y <= Salida( p - 1 downto 0 );
 
 --Fin de Descomentar en caso de Moore comentar en caso de Mealy
 --
@@ -186,22 +186,22 @@ Asignacion_Proximo_Estado: Proximo_Estado <= Salida_MUX( m - 1 downto 0 );  -- a
 --
 
 -- ajusta a la derecha con ceros de relleno, p bits de la salida a N_Bits_Dato bits del dato del MUX.
-Asignacion_MUX_Mealy : process( Dato_Intermedio_2 )
-    begin
-        for i in 0 to 2**k - 1 loop
-            Salidas_Con_Formato( i ) <= std_logic_vector( resize( unsigned( Dato_Intermedio_2( p * ( i + 1 ) - 1 downto p * i ) ), N_Bits_Dato ) );
-        end loop;
-    end process Asignacion_MUX_Mealy;
+--Asignacion_MUX_Mealy : process( Dato_Intermedio_2 )
+--    begin
+--        for i in 0 to 2**k - 1 loop
+--            Salidas_Con_Formato( i ) <= std_logic_vector( resize( unsigned( Dato_Intermedio_2( p * ( i + 1 ) - 1 downto p * i ) ), N_Bits_Dato ) );
+--        end loop;
+--    end process Asignacion_MUX_Mealy;
                                                                       
-Ecuacion_De_Salida_1_Mealy: MUX_PLC generic map( m, T_DM ) -- Selecciona a partir del estado actual todas las posibles salidas.
-                                  Port    map( Direccion => Estado_Actual,
-                                               Dato      => Dato_Intermedio_2,
-                                               Tabla_ROM => Tabla_De_Salida);
-Ecuacion_De_Salida_2_Mealy: MUX_PLC generic map( k, T_DM ) -- Selecciona a partir de la entrada actual la salida.
-                                  Port    map( Direccion => x,
-                                               Dato      => Salida,
-                                               Tabla_ROM => Salidas_Con_Formato);
-Salida_De_Mealy: y <= Salida( p - 1 downto 0 );                       
+--Ecuacion_De_Salida_1_Mealy: MUX_PLC generic map( m, T_DM ) -- Selecciona a partir del estado actual todas las posibles salidas.
+--                                  Port    map( Direccion => Estado_Actual,
+--                                               Dato      => Dato_Intermedio_2,
+--                                               Tabla_ROM => Tabla_De_Salida);
+--Ecuacion_De_Salida_2_Mealy: MUX_PLC generic map( k, T_DM ) -- Selecciona a partir de la entrada actual la salida.
+--                                  Port    map( Direccion => x,
+--                                               Dato      => Salida,
+--                                               Tabla_ROM => Salidas_Con_Formato);
+--Salida_De_Mealy: y <= Salida( p - 1 downto 0 );                       
 
 --Fin de Descomentar en caso de Mealy comentar en caso de Moore
 --

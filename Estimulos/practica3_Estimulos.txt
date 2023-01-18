@@ -1,7 +1,7 @@
-#Fichero de Estímulos de detector secuencia.
+#Fichero de Estímulos de práctica 3 Moore
 #Device Name: Discovery2NI
 #Nombre: Izan Amador, Jorge Benavides
-#Fecha: 29 de Noviembre de 2022.
+#Fecha: 11 de Enero de 2022.
 #
 # Delay Time (ns)	Input (I).
 
@@ -19,9 +19,3 @@
     25 ns		001
     25 ns		000
 
-# Segunda secuencia
-
-#    25 ns		001
-#    15 ns		001
-#    15 ns		001
-#    15 ns		000
