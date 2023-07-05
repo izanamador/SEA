@@ -1,29 +1,27 @@
-#+title: Sistemas electrónicos para la automatización
-* Listas de ejercicios propuestos
+#+title: Electronic Systems for Automation
 
-** TODO [#A] Modificar todos los ejercicios de la práctica #1
-Los test bench se realizan con un archivo de estimulos.txt, modificar dichos test.
+This repository contains the work done for the subject Electronic Systems for Automation by Izan Amador and Jorge Benavides. The before mentioned subject belongs to fourth course in the bachelor's of Electronics, Robotics and Mechatronics Engineering from the University of Málaga.  
 
-*** IN-PROGRESS Detalles a tener en cuenta con el contador
-- Generar un top con los sincronizadores
-- XFC Modificar conexiones
-  + PMODC: desde 1-4
-  + Reloj
-  + Botones: 3 botones
-- Consideraciones de implementación:
-  + Para simulación: 4 bits de cuenta y 4 de filtro
-  + Para síntesis: 4 bits de cuenta y 32 de filtro
+The main objective of the subject is to learn the principles of VHDL coding, as well as, formal verification with test benches and RTL.
 
 
-** TODO [#A] Desarrollar una máquina de estados tipo Mealy
+* List of projects
 
-** TODO [#B] Contador mediante una FSM
-Definir un proceso combinacional y un proceso secuencial
-Típicamente esta máquina se modela como Moore.
+** Exercises
+*** exercise0_synchronizer
+*** exercise1_adder
+*** exercise2_shiftregister
+*** exercise3_multiplexer
+*** exercise4_upcounter
+*** exercise5_rom_mux
+*** exercise6_fsm
+*** exercise7_time_verificator
+** Assignments
+*** assignment1_resolution_function
+*** assignment2_universal_shift_register
+*** assignment3_generic_plc
 
-** TODO [#B] Contador "fino"
-Desarrollar una contador con un registro de desplazamiento genérico realimentado
-
-** TODO [#C] Realizar los ejercicios propuestos de forma genérica y/o con máquinas de estados
-Los ejercicios de las diapositivas de segundo, ROMS, contadores en anillo Contador Johnson, etc...
-o
+* Folder structure
+*** .vhd
+*** .tb
+*** vivado_project
