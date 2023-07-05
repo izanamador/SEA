@@ -1,4 +1,5 @@
-![GitHub](https://img.shields.io/github/license/izanamador/https%3A%2F%2Fgithub.com%2Fizanamador%2FSEA)
+![GitHub](https://img.shields.io/github/license/izanamador/SEA)
+
 
 # Electronic Systems for Automation
 This repository contains the work done for the subject Electronic Systems for Automation by Izan Amador and Jorge Benavides. The before mentioned subject belongs to fourth course in the bachelor\'s of Electronics, Robotics and Mechatronics Engineering from the University of Malaga.
