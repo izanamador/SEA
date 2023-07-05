@@ -8,20 +8,31 @@ The main objective of the subject is to learn the principles of VHDL coding, as 
 * List of projects
 
 ** Exercises
+
 *** exercise0_synchronizer
 *** exercise1_adder
 *** exercise2_shiftregister
 *** exercise3_multiplexer
 *** exercise4_upcounter
+
+These exercises involve selecting two combinational circuits and two sequential circuits from the proposed options and briefly explaining how the models work in a preliminary study. A Vivado project should be generated for each chosen model, and a Test Bench with file handling should be generated for the simulation phase to illustrate the correct functioning of the models. The models should be synthesized at the RTL level to verify that they are indeed combinational or sequential. A report should be prepared that illustrates the design, simulation, and synthesis process, including screenshots of simulation timelines and RTL schematics. The VHDL codes used and the generated .CSV files, as well as the original stimulus file, should be included in the PDF.
+
 *** exercise5_rom_mux
+
+The exercise involves simulating and synthesizing the proposed ROM and MUX from the previous slides. The ROM should have a maximum of 4 addresses, or equivalently, the MUX should have two selection lines. The data bus for both the ROM and MUX should be no more than 1 byte. You will need to generate a single Vivado project for both modules and create a single Test Bench with file handling for the simulation phase to illustrate the correct operation of both systems and their equivalence as combinational systems. This means that for the same input, both systems should produce the same output (there are 2 DUTs in the TB: the ROM and the MUX). Synthesize them at the RTL level (RTL Analysis) to verify that they are indeed combinational (do not have memory elements) and correspond to what they represent.
+
 *** exercise6_fsm
+
+The exercise involves designing, simulating, and synthesizing a Mealy or Moore Finite State Machine (FSM) of your choice with between 3 and 8 states and only 2 processes: one sequential and one combinational. The FSM should have a maximum of 2 inputs and 3 outputs. You will need to create a report that illustrates the design, simulation, and synthesis process, including screenshots (simulation waveforms, RTL schematic), etc. The report should also include the VHDL codes used, a screenshot of the generated .CSV file, and the original stimulus file as a function of delay.
+
 *** exercise7_time_verificator
+The exercise involves checking the setup and rise times of the signal as well as other fundamental properties of it. 
 
 ** Assignments
 
 *** assignment1_resolution_function
 
-This assignment involves conducting a detailed study on how the supplied code works and generating a project in Vivado to run the simulation. The assignment also includes answering questions about the meaning of certain lines in the code and the types of circuits that can use resolved logic with multiple drivers. A report should be prepared that illustrates the design and simulation process, including answers to the questions. Screenshots of simulation timelines can be used.
+The assignment involves conducting a detailed study on how the supplied code works and generating a project in Vivado to run the simulation. The assignment also includes answering questions about the meaning of certain lines in the code and the types of circuits that can use resolved logic with multiple drivers. A report should be prepared that illustrates the design and simulation process, including answers to the questions. Screenshots of simulation timelines can be used.
 *** assignment2_universal_shift_register
 
 The assignment involves coding and verifying the functionality of a generic 𝑛-bit universal register and FSM scheme in VHDL. The register has a 3-bit control bus that allows changing its functionality according to the table provided. As a special requirement, the ieee numeric_std package cannot be used
