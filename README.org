@@ -16,12 +16,25 @@ The main objective of the subject is to learn the principles of VHDL coding, as 
 *** exercise5_rom_mux
 *** exercise6_fsm
 *** exercise7_time_verificator
+
 ** Assignments
+
 *** assignment1_resolution_function
+
+This assignment involves conducting a detailed study on how the supplied code works and generating a project in Vivado to run the simulation. The assignment also includes answering questions about the meaning of certain lines in the code and the types of circuits that can use resolved logic with multiple drivers. A report should be prepared that illustrates the design and simulation process, including answers to the questions. Screenshots of simulation timelines can be used.
 *** assignment2_universal_shift_register
+
+The assignment involves coding and verifying the functionality of a generic 𝑛-bit universal register and FSM scheme in VHDL. The register has a 3-bit control bus that allows changing its functionality according to the table provided. As a special requirement, the ieee numeric_std package cannot be used
+
 *** assignment3_generic_plc
 
+The assignment involves describing the supplied PLC code, which cannot be modified once the FSM style (Moore or Mealy) has been selected. The system will have fixed parameters of k_Max = 3 inputs, p_Max = 4 outputs, and m_Max = 4 flip-flops. A single Vivado project must be generated to implement the PLC. A Test Bench must be designed with file handling to illustrate the correct operation of the system with fixed parameters for all k=k_Max, p=p_Max, and m=m_Max. Bounces must be generated in the Trigger signal as if it were an external Pull-Up switch from a process. The only VHDL code to be included in the report will be the designed Test Bench, commented and correctly indented. The PLC must be synthesized at RTL level (RTL Analysis) for k=k_Max, p=p_Max, and m=m_Max to verify that it corresponds to what it represents.
+
 * Folder structure
-*** .vhd
-*** .tb
-*** vivado_project
+Every project has the following structure. It includes the full vivado project and the separated files with the source codes of the test bench and the designed component, for easier readability and usage.  
+*** .vhd 
+Contains the code of the component.
+*** .tb 
+Contains the code of the test bench.
+*** vivado_project 
+Contains the full vivado project.
