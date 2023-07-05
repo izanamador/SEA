@@ -35,7 +35,7 @@ The exercise involves checking the setup and rise times of the signal as well as
 The assignment involves conducting a detailed study on how the supplied code works and generating a project in Vivado to run the simulation. The assignment also includes answering questions about the meaning of certain lines in the code and the types of circuits that can use resolved logic with multiple drivers. A report should be prepared that illustrates the design and simulation process, including answers to the questions. Screenshots of simulation timelines can be used.
 *** assignment2_universal_shift_register
 
-The assignment involves coding and verifying the functionality of a generic 𝑛-bit universal register and FSM scheme in VHDL. The register has a 3-bit control bus that allows changing its functionality according to the table provided. As a special requirement, the ieee numeric_std package cannot be used
+The assignment involves coding and verifying the functionality of a generic 𝑛-bit universal register and FSM scheme in VHDL. The register has a 3-bit control bus that allows changing its functionality according to the table provided. As a special requirement, the ieee numeric_std package cannot be used.
 
 *** assignment3_generic_plc
 
